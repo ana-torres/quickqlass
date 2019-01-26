@@ -7,21 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14CC86721F3B869002C4DD2 /* ActivitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */; };
+		A14CC86A21F3BB79002C4DD2 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */; };
+		A14CC86B21F3BB79002C4DD2 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */; };
+		A195169521FCBEBB00B7D03D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A195169421FCBEBB00B7D03D /* BaseViewController.swift */; };
 		A1C28B0821E77234004E6A23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B0721E77234004E6A23 /* AppDelegate.swift */; };
-		A1C28B0A21E77234004E6A23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B0921E77234004E6A23 /* ViewController.swift */; };
 		A1C28B0D21E77234004E6A23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C28B0B21E77234004E6A23 /* Main.storyboard */; };
 		A1C28B0F21E77236004E6A23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C28B0E21E77236004E6A23 /* Assets.xcassets */; };
 		A1C28B1221E77236004E6A23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C28B1021E77236004E6A23 /* LaunchScreen.storyboard */; };
+		A1C28B1A21E772E3004E6A23 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B1921E772E3004E6A23 /* LoginViewController.swift */; };
+		A1C28B1C21E772ED004E6A23 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B1B21E772ED004E6A23 /* RegisterViewController.swift */; };
+		A1C28B1E21E772FD004E6A23 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B1D21E772FD004E6A23 /* HomeViewController.swift */; };
+		A1C28B2A21E893E7004E6A23 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B2921E893E7004E6A23 /* MainPageViewController.swift */; };
+		A1C28B2C21E89406004E6A23 /* Intro1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B2B21E89406004E6A23 /* Intro1ViewController.swift */; };
+		A1C28B2E21E89428004E6A23 /* Intro2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B2D21E89428004E6A23 /* Intro2ViewController.swift */; };
+		A1C28B3021E89433004E6A23 /* Intro3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B2F21E89433004E6A23 /* Intro3ViewController.swift */; };
+		A1C28B3221E894D8004E6A23 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B3121E894D8004E6A23 /* MainNavigationController.swift */; };
+		A1C28B3421E89518004E6A23 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B3321E89518004E6A23 /* Utilities.swift */; };
+		A1C28B3621E898F5004E6A23 /* IntroNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B3521E898F5004E6A23 /* IntroNavController.swift */; };
+		A1C28B7121ECDB62004E6A23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1C28B7021ECDB61004E6A23 /* GoogleService-Info.plist */; };
+		A1C28B9A21EE1837004E6A23 /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B9821EE1837004E6A23 /* CourseCollectionViewCell.swift */; };
+		A1C28B9B21EE1837004E6A23 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C28B9921EE1837004E6A23 /* CourseCollectionViewCell.xib */; };
+		A1C28B9F21EE1AFB004E6A23 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B9E21EE1AFB004E6A23 /* Course.swift */; };
+		A1C28BA121EE1DC1004E6A23 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28BA021EE1DC1004E6A23 /* AddCourseViewController.swift */; };
+		A1C28BA921EE2BD1004E6A23 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28BA821EE2BD1004E6A23 /* Activity.swift */; };
+		A1C28BAC21EE2F53004E6A23 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28BAB21EE2F53004E6A23 /* AddActivityViewController.swift */; };
+		B973C25E1ABF597E75D53019 /* Pods_Kuiklass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F66BAA1C2234F29613FE606 /* Pods_Kuiklass.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F66BAA1C2234F29613FE606 /* Pods_Kuiklass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kuiklass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		333EDAA7EBECDFCD561BA160 /* Pods-Kuiklass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuiklass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kuiklass/Pods-Kuiklass.debug.xcconfig"; sourceTree = "<group>"; };
+		A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewController.swift; sourceTree = "<group>"; };
+		A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		A195169421FCBEBB00B7D03D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A1C28B0421E77234004E6A23 /* Kuiklass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuiklass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C28B0721E77234004E6A23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1C28B0921E77234004E6A23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1C28B0C21E77234004E6A23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1C28B0E21E77236004E6A23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1C28B1121E77236004E6A23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1C28B1321E77236004E6A23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1C28B1921E772E3004E6A23 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A1C28B1B21E772ED004E6A23 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A1C28B1D21E772FD004E6A23 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A1C28B2921E893E7004E6A23 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		A1C28B2B21E89406004E6A23 /* Intro1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro1ViewController.swift; sourceTree = "<group>"; };
+		A1C28B2D21E89428004E6A23 /* Intro2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro2ViewController.swift; sourceTree = "<group>"; };
+		A1C28B2F21E89433004E6A23 /* Intro3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro3ViewController.swift; sourceTree = "<group>"; };
+		A1C28B3121E894D8004E6A23 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		A1C28B3321E89518004E6A23 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		A1C28B3521E898F5004E6A23 /* IntroNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroNavController.swift; sourceTree = "<group>"; };
+		A1C28B7021ECDB61004E6A23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A1C28B9821EE1837004E6A23 /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1C28B9921EE1837004E6A23 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
+		A1C28B9E21EE1AFB004E6A23 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		A1C28BA021EE1DC1004E6A23 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
+		A1C28BA821EE2BD1004E6A23 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		A1C28BAB21EE2F53004E6A23 /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		F053D44614F529D072EB8B3A /* Pods-Kuiklass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuiklass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kuiklass/Pods-Kuiklass.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +73,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B973C25E1ABF597E75D53019 /* Pods_Kuiklass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34A0EE8735B07A0878F88629 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F66BAA1C2234F29613FE606 /* Pods_Kuiklass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BBD90266E4674B782F3ED7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				333EDAA7EBECDFCD561BA160 /* Pods-Kuiklass.debug.xcconfig */,
+				F053D44614F529D072EB8B3A /* Pods-Kuiklass.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A1C28AFB21E77234004E6A23 = {
 			isa = PBXGroup;
 			children = (
 				A1C28B0621E77234004E6A23 /* Kuiklass */,
 				A1C28B0521E77234004E6A23 /* Products */,
+				5BBD90266E4674B782F3ED7C /* Pods */,
+				34A0EE8735B07A0878F88629 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +118,58 @@
 		A1C28B0621E77234004E6A23 /* Kuiklass */ = {
 			isa = PBXGroup;
 			children = (
+				A1C28BAA21EE2C94004E6A23 /* ActivityCell */,
+				A1C28B9D21EE1AE3004E6A23 /* Models */,
+				A1C28B9C21EE1843004E6A23 /* CourseCell */,
 				A1C28B0721E77234004E6A23 /* AppDelegate.swift */,
-				A1C28B0921E77234004E6A23 /* ViewController.swift */,
 				A1C28B0B21E77234004E6A23 /* Main.storyboard */,
 				A1C28B0E21E77236004E6A23 /* Assets.xcassets */,
 				A1C28B1021E77236004E6A23 /* LaunchScreen.storyboard */,
 				A1C28B1321E77236004E6A23 /* Info.plist */,
+				A1C28B1921E772E3004E6A23 /* LoginViewController.swift */,
+				A1C28B1B21E772ED004E6A23 /* RegisterViewController.swift */,
+				A1C28B1D21E772FD004E6A23 /* HomeViewController.swift */,
+				A1C28B2921E893E7004E6A23 /* MainPageViewController.swift */,
+				A1C28B2B21E89406004E6A23 /* Intro1ViewController.swift */,
+				A1C28B2D21E89428004E6A23 /* Intro2ViewController.swift */,
+				A1C28B2F21E89433004E6A23 /* Intro3ViewController.swift */,
+				A1C28B3121E894D8004E6A23 /* MainNavigationController.swift */,
+				A1C28B3321E89518004E6A23 /* Utilities.swift */,
+				A1C28B3521E898F5004E6A23 /* IntroNavController.swift */,
+				A1C28B7021ECDB61004E6A23 /* GoogleService-Info.plist */,
+				A1C28BA021EE1DC1004E6A23 /* AddCourseViewController.swift */,
+				A1C28BAB21EE2F53004E6A23 /* AddActivityViewController.swift */,
+				A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */,
+				A195169421FCBEBB00B7D03D /* BaseViewController.swift */,
 			);
 			path = Kuiklass;
+			sourceTree = "<group>";
+		};
+		A1C28B9C21EE1843004E6A23 /* CourseCell */ = {
+			isa = PBXGroup;
+			children = (
+				A1C28B9821EE1837004E6A23 /* CourseCollectionViewCell.swift */,
+				A1C28B9921EE1837004E6A23 /* CourseCollectionViewCell.xib */,
+			);
+			path = CourseCell;
+			sourceTree = "<group>";
+		};
+		A1C28B9D21EE1AE3004E6A23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1C28B9E21EE1AFB004E6A23 /* Course.swift */,
+				A1C28BA821EE2BD1004E6A23 /* Activity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1C28BAA21EE2C94004E6A23 /* ActivityCell */ = {
+			isa = PBXGroup;
+			children = (
+				A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */,
+				A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */,
+			);
+			path = ActivityCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1C28B1621E77236004E6A23 /* Build configuration list for PBXNativeTarget "Kuiklass" */;
 			buildPhases = (
+				7DA80C34F7C8D165CAC19FC1 /* [CP] Check Pods Manifest.lock */,
 				A1C28B0021E77234004E6A23 /* Sources */,
 				A1C28B0121E77234004E6A23 /* Frameworks */,
 				A1C28B0221E77234004E6A23 /* Resources */,
+				7ADC788D186F81537059DD0C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,20 +233,95 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C28B1221E77236004E6A23 /* LaunchScreen.storyboard in Resources */,
+				A1C28B7121ECDB62004E6A23 /* GoogleService-Info.plist in Resources */,
 				A1C28B0F21E77236004E6A23 /* Assets.xcassets in Resources */,
 				A1C28B0D21E77234004E6A23 /* Main.storyboard in Resources */,
+				A14CC86B21F3BB79002C4DD2 /* ActivityTableViewCell.xib in Resources */,
+				A1C28B9B21EE1837004E6A23 /* CourseCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7ADC788D186F81537059DD0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kuiklass/Pods-Kuiklass-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kuiklass/Pods-Kuiklass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DA80C34F7C8D165CAC19FC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kuiklass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1C28B0021E77234004E6A23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1C28B0A21E77234004E6A23 /* ViewController.swift in Sources */,
+				A1C28BA921EE2BD1004E6A23 /* Activity.swift in Sources */,
+				A1C28B9F21EE1AFB004E6A23 /* Course.swift in Sources */,
+				A1C28B3621E898F5004E6A23 /* IntroNavController.swift in Sources */,
+				A1C28B3221E894D8004E6A23 /* MainNavigationController.swift in Sources */,
+				A195169521FCBEBB00B7D03D /* BaseViewController.swift in Sources */,
+				A1C28B2C21E89406004E6A23 /* Intro1ViewController.swift in Sources */,
+				A1C28B3421E89518004E6A23 /* Utilities.swift in Sources */,
+				A1C28B2E21E89428004E6A23 /* Intro2ViewController.swift in Sources */,
+				A1C28B1C21E772ED004E6A23 /* RegisterViewController.swift in Sources */,
+				A14CC86A21F3BB79002C4DD2 /* ActivityTableViewCell.swift in Sources */,
+				A1C28B3021E89433004E6A23 /* Intro3ViewController.swift in Sources */,
+				A1C28B1A21E772E3004E6A23 /* LoginViewController.swift in Sources */,
 				A1C28B0821E77234004E6A23 /* AppDelegate.swift in Sources */,
+				A1C28B9A21EE1837004E6A23 /* CourseCollectionViewCell.swift in Sources */,
+				A1C28BA121EE1DC1004E6A23 /* AddCourseViewController.swift in Sources */,
+				A1C28B2A21E893E7004E6A23 /* MainPageViewController.swift in Sources */,
+				A1C28B1E21E772FD004E6A23 /* HomeViewController.swift in Sources */,
+				A14CC86721F3B869002C4DD2 /* ActivitiesTableViewController.swift in Sources */,
+				A1C28BAC21EE2F53004E6A23 /* AddActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +465,7 @@
 		};
 		A1C28B1721E77236004E6A23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 333EDAA7EBECDFCD561BA160 /* Pods-Kuiklass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,7 +475,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.eoi.Kuiklass;
+				PRODUCT_BUNDLE_IDENTIFIER = es.anatorres.Kuiklass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,6 +484,7 @@
 		};
 		A1C28B1821E77236004E6A23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F053D44614F529D072EB8B3A /* Pods-Kuiklass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,7 +494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.eoi.Kuiklass;
+				PRODUCT_BUNDLE_IDENTIFIER = es.anatorres.Kuiklass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
