@@ -10,43 +10,50 @@ import Foundation
 import FirebaseDatabase
 struct Activity {
     
-    var uid: String?
-    let name: String
+    let ref: DatabaseReference?
+    let uid: String
+    var name: String
    // var date: String
    // var time: String
     var idCourse: String
     //var categ: String
+    var completed: Bool
     
     // Constructor estandar
-    init(_ name: String, _ idCourse: String /*_ categ: String*/) {
-        self.uid = nil
+    init(_ uid: String = "", _ name: String, _ idCourse: String, _ completed: Bool /*_ categ: String*/) {
+        self.ref = nil
+        self.uid = uid
         self.name = name
         //self.date = date
         //self.time = time
         self.idCourse = idCourse
      //   self.categ = categ
+        self.completed = completed
     }
     
     // constructor para leer de firebase
     init?(snapshot: DataSnapshot) {
         guard
             let value = snapshot.value as? [String: AnyObject],
-            let uid = value["uid"] as? String,
+            //let uid = value["uid"] as? String,
             let name = value["name"] as? String,
             //let date = value["date"] as? String,
             //let time = value["time"] as? String,
-            let idCourse = value["idCourse"] as? String//,
+            let idCourse = value["idCourse"] as? String,
            // let categ = value["categ"] as? String
+            let completed = value["completed"] as? Bool
             else {
                 return nil
         }
         
-        self.uid = uid
+        self.ref = snapshot.ref
+        self.uid = snapshot.key
         self.name = name
         //self.date = date
         //self.time = time
         self.idCourse = idCourse
         //self.categ = categ
+        self.completed = completed
     
 }
     
@@ -59,6 +66,7 @@ struct Activity {
             //"time": time,
             "idCourse": idCourse,
            // "categ": categ
+            "completed": completed
         ]
     }
 }

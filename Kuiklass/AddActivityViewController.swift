@@ -33,9 +33,9 @@ class AddActivityViewController: BaseViewController {
         let key = self.ref?.childByAutoId().key
         self.ref?.updateChildValues(["\(key!)": activityItem.toAnyObject()], withCompletionBlock: {error, ref in
             
-            //            self.alertLoading.dismiss(animated: true, completion: {
+            self.alertLoading.dismiss(animated: true, completion: {
             self.navigationController?.popViewController(animated: true)
-            //})
+            })
             
             if error != nil {
                 print("ERROR")

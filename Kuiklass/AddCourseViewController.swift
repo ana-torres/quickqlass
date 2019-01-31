@@ -14,12 +14,14 @@ class AddCourseViewController: BaseViewController {
     
     @IBOutlet weak var name: UITextField!
     var ref: DatabaseReference!
+    var courses: [Course] = []
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ref = Database.database().reference(withPath: "courses")
+        let user = Auth.auth().currentUser
+        ref = Database.database().reference(withPath: "course")
         
     }
     
@@ -31,10 +33,14 @@ class AddCourseViewController: BaseViewController {
         
         guard let courseName = name.text else {return}
     
-        var courseItem = Course(courseName)
+        let user = Auth.auth().currentUser
+        var courseItem = Course(courseName, user!.uid)
         
-        let uid = self.ref?.childByAutoId().key
-        self.ref?.updateChildValues(["\(uid!)": courseItem.toAnyObject()], withCompletionBlock: {error, ref in
+        
+//       Anotaciones de un ejemplo self.ref.child("users").child(self.user.uid).child("items").childByAutoId().child("title").setValue(userInput)
+        
+        let cid = self.ref?.childByAutoId().key
+        self.ref?.updateChildValues(["\(cid!)": courseItem.toAnyObject()], withCompletionBlock: {error, ref in
             
                 self.alertLoading.dismiss(animated: true, completion: {
                     self.navigationController?.popViewController(animated: true)

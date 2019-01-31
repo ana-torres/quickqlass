@@ -48,18 +48,7 @@ class RegisterViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func regisnUser(_ sender: Any) {
-        
-        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (authResult, error) in
-            
-            if(error != nil){
-                print("Es incorrecto \(String(describing: error))")
-            }
-            
-            guard let user = authResult?.user else { return }
-            self.ref.child("users").child(user.uid).setValue(["name": self.nameField.text, "surname": self.surnameField.text, "email": self.emailField.text])
-            
-        }
+    @IBAction func registUser(_ sender: Any) {
     
         
         guard let _ = nameField.text, nameField.text?.count != 0  else {
@@ -91,10 +80,41 @@ class RegisterViewController: BaseViewController {
             alert("Contraseña inválida", "Por favor, introduzca una contraseña con entre 6 y 10 caracteres")
             return
         }
- 
-        let registro = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! HomeViewController
         
-        self.navigationController?.pushViewController(registro, animated: true)
+        
+        loadingShow()
+        
+        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (authResult, error) in
+            
+            if(error != nil){
+                print("Es incorrecto \(String(describing: error))")
+            }
+            
+            guard let user = authResult?.user else {
+                print("User error")
+                self.showBasicAlert("Error", "Ha ocurrido un error en el registro, comprueba tus datos.")
+                return
+            }
+            
+            let newUser = User(user.uid, self.nameField.text!, self.surnameField.text!, user.email!)
+            
+            let uid = self.ref?.childByAutoId().key
+            self.ref?.updateChildValues(["\(uid!)": newUser.toAnyObject()], withCompletionBlock: {error, ref in
+                if error != nil {
+                    self.showBasicAlert("Error", "Ha ocurrido un error en el registro.")
+                }
+                else {
+                    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                    self.present(controller, animated: true, completion: nil)
+                }
+            })
+            //            self.ref.child("users").child(user.uid).setValue(["name": self.nameField.text, "surname": self.surnameField.text, "email": self.emailField.text])
+            
+        }
+ 
+//        let registro = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! HomeViewController
+//
+//        self.navigationController?.pushViewController(registro, animated: true)
  
     }
     

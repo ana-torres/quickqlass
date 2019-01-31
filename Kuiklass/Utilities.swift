@@ -31,14 +31,14 @@ extension UIButton {
     func mainButton() {
         
         self.layer.cornerRadius = self.frame.size.height/2
-        self.backgroundColor = UIColor (red: 0.438, green: 0.596, blue: 0.811, alpha: 1.0)
+        self.backgroundColor = UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0)
         self.setTitleColor(UIColor.white, for: UIControl.State.normal)
         
     }
     
     func secButton() {
         
-        self.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        self.setTitleColor(UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0), for: UIControl.State.normal)
         self.setTitleColor(UIColor.blue, for: UIControl.State.highlighted)
     }
 }
@@ -47,14 +47,14 @@ extension UILabel {
     
     func fieldLabel() {
         
-        self.textColor = UIColor.black //(red: 0.667, green: 0.667, blue: 0.667, alpha: 1)
+        self.textColor = UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0) //(red: 0.667, green: 0.667, blue: 0.667, alpha: 1)
         self.font = self.font.withSize(15)
         
     }
     
     func mainLabel() {
         
-        self.textColor = UIColor (red: 0.438, green: 0.596, blue: 0.811, alpha: 1.0)
+        self.textColor = UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0)
         self.font = self.font.withSize(40)
     }
 }

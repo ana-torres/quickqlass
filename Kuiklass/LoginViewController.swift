@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     @IBOutlet weak var loginTitle: UILabel!
-    @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var userField: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -25,9 +26,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         loginTitle.mainLabel()
-        userLabel.fieldLabel()
+        emailLabel.fieldLabel()
         passwordLabel.fieldLabel()
-        userField.mainField()
+        emailField.mainField()
         passwordField.mainField()
         loginButton.mainButton()
         regisButton.secButton()
@@ -36,7 +37,63 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    @IBAction func login(_ sender: UIButton) {
+        
+        loadingShow()
+        
+        Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
+            
+            self.loadingHide()
+            
+            if ((error) != nil) {
+                print("Error \(String(describing: error))")
+            }
+            
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+            self.present(controller, animated: true, completion: nil)
+            
+        }
+    }
+    
+    @IBAction func passwordReset(_ sender: UIButton) {
+        let prompt = UIAlertController(title: "Recuperar Contraseña", message: "Email:", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            let userInput = prompt.textFields![0].text
+            if (userInput!.isEmpty) {
+                return
+            }
+            Auth.auth().sendPasswordReset(withEmail: userInput!, completion: { (error) in
+                if let error = error {
+                    if let errCode = AuthErrorCode(rawValue: error._code) {
+                        switch errCode {
+                        case .errorCodeUserNotFound:
+                            DispatchQueue.main.async {
+                                self.showAlert("User account not found. Try registering")
+                            }
+                        default:
+                            DispatchQueue.main.async {
+                                self.showAlert("Error: \(error.localizedDescription)")
+                            }
+                        }
+                    }
+                    return
+                } else {
+                    DispatchQueue.main.async {
+                        self.showAlert("You'll receive an email shortly to reset your password.")
+                    }
+                }
+            })
+        }
+        prompt.addTextField(configurationHandler: nil)
+        prompt.addAction(okAction)
+        present(prompt, animated: true, completion: nil)
+    }
 
+    
     /*
     // MARK: - Navigation
 

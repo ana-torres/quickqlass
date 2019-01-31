@@ -26,7 +26,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         self.courseTable.delegate = self
         self.courseTable.dataSource = self
         
-        ref = Database.database().reference(withPath: "courses")
+        ref = Database.database().reference(withPath: "course")
         
         self.courseTable?.register(UINib(nibName: xibCell, bundle: nil), forCellWithReuseIdentifier: idCell)
         

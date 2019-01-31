@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.71141070202299816" green="0.85082709670958823" blue="0.90113420050761417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="CwM-S2-hGn"/>
                     </view>
                 </viewController>
@@ -54,7 +54,7 @@
                                 <rect key="frame" x="38" y="85" width="309" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.42847336644692274" green="0.59565530860459404" blue="0.81093353426395942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r80-1O-sYd">
@@ -109,14 +109,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="kCp-Oa-TVl"/>
                     <connections>
+                        <outlet property="emailField" destination="lo9-pO-m6Y" id="Q6z-ef-QXC"/>
+                        <outlet property="emailLabel" destination="r80-1O-sYd" id="fTf-YT-1oW"/>
                         <outlet property="forgotButton" destination="e23-1r-bAU" id="1CC-dQ-NSq"/>
                         <outlet property="loginButton" destination="DvT-Nh-JX3" id="SCl-de-8G9"/>
                         <outlet property="loginTitle" destination="W4W-nF-rzd" id="62y-5u-gfS"/>
                         <outlet property="passwordField" destination="vGw-If-Dah" id="2tq-Rw-spP"/>
                         <outlet property="passwordLabel" destination="6dq-aI-5Vc" id="chY-sh-s9S"/>
                         <outlet property="regisButton" destination="xtD-hb-Yia" id="fvU-Xq-fdy"/>
-                        <outlet property="userField" destination="lo9-pO-m6Y" id="Q6z-ef-QXC"/>
-                        <outlet property="userLabel" destination="r80-1O-sYd" id="fTf-YT-1oW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zY8-cF-7YM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,14 +204,14 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2i-EW-i7G">
                                 <rect key="frame" x="51" y="451" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="onTintColor" red="0.4284733664" green="0.59565530860000004" blue="0.81093353430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="onTintColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNn-9c-Ib8">
                                 <rect key="frame" x="58" y="513" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Completado"/>
                                 <connections>
-                                    <action selector="regisnUser:" destination="ByD-aH-rIw" eventType="touchUpInside" id="Bln-kB-u81"/>
+                                    <action selector="registUser:" destination="ByD-aH-rIw" eventType="touchUpInside" id="Bln-kB-u81"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -253,7 +253,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.58496929213133775" green="0.70700845017763836" blue="0.82889831852791884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4N8-2f-n2S"/>
                     </view>
                 </viewController>
@@ -277,7 +277,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.45830156942563172" green="0.63651272153241267" blue="0.86986437182741116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="7aO-Qz-yaz"/>
                     </view>
                 </viewController>
@@ -313,7 +313,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-Af-WfF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qNF-dL-bZD">
                                     <size key="itemSize" width="176" height="122"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>

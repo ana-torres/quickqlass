@@ -32,6 +32,7 @@
 		A1C28BA121EE1DC1004E6A23 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28BA021EE1DC1004E6A23 /* AddCourseViewController.swift */; };
 		A1C28BA921EE2BD1004E6A23 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28BA821EE2BD1004E6A23 /* Activity.swift */; };
 		A1C28BAC21EE2F53004E6A23 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28BAB21EE2F53004E6A23 /* AddActivityViewController.swift */; };
+		A1EF5C3922026ECD007354E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EF5C3822026ECD007354E7 /* User.swift */; };
 		B973C25E1ABF597E75D53019 /* Pods_Kuiklass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F66BAA1C2234F29613FE606 /* Pods_Kuiklass.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		A1C28BA021EE1DC1004E6A23 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
 		A1C28BA821EE2BD1004E6A23 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		A1C28BAB21EE2F53004E6A23 /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		A1EF5C3822026ECD007354E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F053D44614F529D072EB8B3A /* Pods-Kuiklass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuiklass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kuiklass/Pods-Kuiklass.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 			children = (
 				A1C28B9E21EE1AFB004E6A23 /* Course.swift */,
 				A1C28BA821EE2BD1004E6A23 /* Activity.swift */,
+				A1EF5C3822026ECD007354E7 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				A1C28B2C21E89406004E6A23 /* Intro1ViewController.swift in Sources */,
 				A1C28B3421E89518004E6A23 /* Utilities.swift in Sources */,
 				A1C28B2E21E89428004E6A23 /* Intro2ViewController.swift in Sources */,
+				A1EF5C3922026ECD007354E7 /* User.swift in Sources */,
 				A1C28B1C21E772ED004E6A23 /* RegisterViewController.swift in Sources */,
 				A14CC86A21F3BB79002C4DD2 /* ActivityTableViewCell.swift in Sources */,
 				A1C28B3021E89433004E6A23 /* Intro3ViewController.swift in Sources */,
