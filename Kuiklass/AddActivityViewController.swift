@@ -5,7 +5,7 @@
 //  Created by Ana Torres Piedra on 15/01/2019.
 //  Copyright © 2019 Ana Torres. All rights reserved.
 //
-
+/*
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
@@ -48,3 +48,4 @@ class AddActivityViewController: BaseViewController {
 
 
 }
+*/

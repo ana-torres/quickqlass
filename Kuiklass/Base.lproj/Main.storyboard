@@ -109,14 +109,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="kCp-Oa-TVl"/>
                     <connections>
-                        <outlet property="emailField" destination="lo9-pO-m6Y" id="Q6z-ef-QXC"/>
-                        <outlet property="emailLabel" destination="r80-1O-sYd" id="fTf-YT-1oW"/>
                         <outlet property="forgotButton" destination="e23-1r-bAU" id="1CC-dQ-NSq"/>
                         <outlet property="loginButton" destination="DvT-Nh-JX3" id="SCl-de-8G9"/>
                         <outlet property="loginTitle" destination="W4W-nF-rzd" id="62y-5u-gfS"/>
                         <outlet property="passwordField" destination="vGw-If-Dah" id="2tq-Rw-spP"/>
                         <outlet property="passwordLabel" destination="6dq-aI-5Vc" id="chY-sh-s9S"/>
                         <outlet property="regisButton" destination="xtD-hb-Yia" id="fvU-Xq-fdy"/>
+                        <outlet property="userField" destination="lo9-pO-m6Y" id="Q6z-ef-QXC"/>
+                        <outlet property="userLabel" destination="r80-1O-sYd" id="fTf-YT-1oW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zY8-cF-7YM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -211,7 +211,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Completado"/>
                                 <connections>
-                                    <action selector="registUser:" destination="ByD-aH-rIw" eventType="touchUpInside" id="Bln-kB-u81"/>
+                                    <action selector="regisnUser:" destination="ByD-aH-rIw" eventType="touchUpInside" id="Bln-kB-u81"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -507,12 +507,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRj-i9-llN">
+                                <rect key="frame" x="66" y="277" width="283" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lRv-8T-2LG"/>
                     </view>
                     <connections>
-                        <outlet property="name" destination="3TC-U0-yeD" id="4AW-yR-mdG"/>
+                        <outlet property="courseDescription" destination="qRj-i9-llN" id="w1i-aZ-zDl"/>
+                        <outlet property="courseName" destination="3TC-U0-yeD" id="rU2-20-Uxq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7I6-PB-VyT" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -26,7 +26,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         self.courseTable.delegate = self
         self.courseTable.dataSource = self
         
-        ref = Database.database().reference(withPath: "course")
+        ref = Database.database().reference(withPath: "courses")
         
         self.courseTable?.register(UINib(nibName: xibCell, bundle: nil), forCellWithReuseIdentifier: idCell)
         
@@ -93,16 +93,16 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         performSegue(withIdentifier: "activities", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "activities"{
-
-            let destViewController = segue.destination as! ActivitiesTableViewController
-
-            if let itemIndex = courseTable.indexPathsForSelectedItems?.first?.item {
-                let selectedItem = self.items[itemIndex]
-                destViewController.activities = selectedItem.activities
-            }
-
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "activities"{
+//
+//            let destViewController = segue.destination as! ActivitiesTableViewController
+//
+//            if let itemIndex = courseTable.indexPathsForSelectedItems?.first?.item {
+//                let selectedItem = self.items[itemIndex]
+//                destViewController.activities = selectedItem.activities
+//            }
+//
+//        }
+//    }
 }

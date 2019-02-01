@@ -12,19 +12,21 @@ import FirebaseDatabase
 struct Course {
     
     var ref: DatabaseReference?
-    var cid: String
+   // var key/*cid*/: String
     var name: String
-    //var image: String
-    var activities: [Activity]
-    let userId: String
+    var image: String
+    var description: String
+    //var activities: [Activity]
+    //let userId: String
     // Constructor estandar
-    init(_ cid: String = "", _ name: String, _ image: String = "", _ userId: String) {
+    init(/*_ key: String = "",*/ _ name: String,_ description: String, _ image: String = ""/*, _ userId: String*/) {
         self.ref = nil
-        self.cid = cid
+        //self.key = key
         self.name = name
-        //self.image = image
-        self.activities = []
-        self.userId = userId
+        self.image = image
+        self.description = description
+        //self.activities = []
+        //self.userId = userId
     }
     
     // constructor para leer de firebase
@@ -32,31 +34,34 @@ struct Course {
         guard
             let value = snapshot.value as? [String: AnyObject],
             //let uid = value["uid"] as? String,
-            var name = value["name"] as? String,
-            //let image = value["image"] as? String,
-            var activities = value ["activities"] as? [Activity],
-            let userId = value ["userId"] as? String
+            let name = value["name"] as? String,
+            let description = value["description"] as? String,
+            let image = value["image"] as? String
+            //var activities = value ["activities"] as? [Activity],
+            //let userId = value ["userId"] as? String
             else {
                 return nil
         }
         
         self.ref = snapshot.ref
-        self.cid = snapshot.key
+        //self.key = snapshot.key
         self.name = name
-        //self.image = image
-        self.activities = []
-        self.userId = userId
+        self.image = image
+        self.description = description
+        //self.activities = []
+        //self.userId = userId
     }
     
     
     // funcion para escribir en firebase de manera sencilla
     func toAnyObject() -> Any {
         return [
-            "cid": cid,
+            //"key": key,
             "name": name,
-           // "image": image,
-            "activities": [activities],
-            "userId" : userId
+            "image": image,
+            "description": description
+            //"activities": [activities],
+            //"userId" : userId
         ]
     }
 }

@@ -66,24 +66,25 @@ class LoginViewController: BaseViewController {
             if (userInput!.isEmpty) {
                 return
             }
-            Auth.auth().sendPasswordReset(withEmail: userInput!, completion: { (error) in
+            Auth.auth().sendPasswordReset(withEmail: self.emailField.text!, completion: { (error) in
                 if let error = error {
                     if let errCode = AuthErrorCode(rawValue: error._code) {
                         switch errCode {
-                        case .errorCodeUserNotFound:
+                        case .userNotFound:
+                            //errorCodeUserNotFound
                             DispatchQueue.main.async {
-                                self.showAlert("User account not found. Try registering")
+                                self.showBasicAlert("Error","Usuario no registrado, inténtelo de nuevo")
                             }
                         default:
                             DispatchQueue.main.async {
-                                self.showAlert("Error: \(error.localizedDescription)")
+                                self.showBasicAlert("Error", "\(error.localizedDescription)")
                             }
                         }
                     }
                     return
                 } else {
                     DispatchQueue.main.async {
-                        self.showAlert("You'll receive an email shortly to reset your password.")
+                        self.showBasicAlert("Recuperar contraseña", "Gracias! En breves recibirás un email para recuperar tu contraseña")
                     }
                 }
             })

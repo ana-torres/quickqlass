@@ -8,20 +8,20 @@
 
 import UIKit
 import FirebaseDatabase
-import FirebaseAuth
 
 class AddCourseViewController: BaseViewController {
     
-    @IBOutlet weak var name: UITextField!
-    var ref: DatabaseReference!
-    var courses: [Course] = []
+    @IBOutlet weak var courseName: UITextField!
+    @IBOutlet weak var courseDescription: UITextField!
+    
+    var ref: DatabaseReference?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let user = Auth.auth().currentUser
-        ref = Database.database().reference(withPath: "course")
+       // let user = Auth.auth().currentUser
+        ref = Database.database().reference(withPath: "courses")
         
     }
     
@@ -31,16 +31,19 @@ class AddCourseViewController: BaseViewController {
         
         loadingShow()
         
-        guard let courseName = name.text else {return}
-    
-        let user = Auth.auth().currentUser
-        var courseItem = Course(courseName, user!.uid)
-        
+//        guard let courseName = courseName.text else {return}
+//        guard let courseDescription = courseDescription.text else {return}
+//
+        //let user = Auth.auth().currentUser
+        guard let courseName = courseName.text else { return }
+        guard let courseDescription = courseDescription.text else { return}
+        var courseItem = Course(courseName, courseDescription)
         
 //       Anotaciones de un ejemplo self.ref.child("users").child(self.user.uid).child("items").childByAutoId().child("title").setValue(userInput)
         
-        let cid = self.ref?.childByAutoId().key
-        self.ref?.updateChildValues(["\(cid!)": courseItem.toAnyObject()], withCompletionBlock: {error, ref in
+        let key = self.ref?.child("courses").child("user").childByAutoId().key
+        
+        self.ref?.updateChildValues(["\(key!)": courseItem.toAnyObject()], withCompletionBlock: {error, ref in
             
                 self.alertLoading.dismiss(animated: true, completion: {
                     self.navigationController?.popViewController(animated: true)
