@@ -27,6 +27,8 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         self.courseTable.dataSource = self
         
         ref = Database.database().reference(withPath: "courses")
+        courseTable.backgroundColor = UIColor.white
+        courseTable.alwaysBounceVertical = true
         
         self.courseTable?.register(UINib(nibName: xibCell, bundle: nil), forCellWithReuseIdentifier: idCell)
         
@@ -49,6 +51,9 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     @IBAction func logout (_ sender: Any){
         try! Auth.auth().signOut()
         
+        let storyboard = UIStoryboard (name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Login")
+        self.present(controller, animated: true, completion: nil)
     }
     
 //    func initItems(){
@@ -63,6 +68,8 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idCell, for: indexPath) as! CourseCollectionViewCell
+        
+        cell.setUpViews()
         
         cell.courseName.text = self.items[indexPath.row].name
 //        cell.img.image = UIImage(named: self.items?[indexPath.row].image ?? "")
@@ -93,16 +100,17 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         performSegue(withIdentifier: "activities", sender: self)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "activities"{
-//
-//            let destViewController = segue.destination as! ActivitiesTableViewController
-//
-//            if let itemIndex = courseTable.indexPathsForSelectedItems?.first?.item {
-//                let selectedItem = self.items[itemIndex]
-//                destViewController.activities = selectedItem.activities
-//            }
-//
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "activities"{
+
+            let destViewController = segue.destination as! ActivitiesTableViewController
+
+            if let itemIndex = courseTable.indexPathsForSelectedItems?.first?.item {
+                let selectedItem = self.items[itemIndex]
+                destViewController.activities = selectedItem.activities
+            }
+
+        }
+    }
+    
 }

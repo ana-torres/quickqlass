@@ -57,34 +57,6 @@
                                 <color key="textColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r80-1O-sYd">
-                                <rect key="frame" x="38" y="220" width="59" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dq-aI-5Vc">
-                                <rect key="frame" x="38" y="345" width="89" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo9-pO-m6Y">
-                                <rect key="frame" x="38" y="265" width="253" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGw-If-Dah">
-                                <rect key="frame" x="38" y="374" width="253" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e23-1r-bAU">
                                 <rect key="frame" x="107" y="579" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,25 +75,45 @@
                                     <segue destination="ByD-aH-rIw" kind="show" id="2Q2-J2-7ap"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-user-14.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vZ9-hR-e5h">
+                                <rect key="frame" x="38" y="254" width="55" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="hDg-Vs-dcD">
+                                <rect key="frame" x="43" y="351" width="44" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGw-If-Dah">
+                                <rect key="frame" x="122" y="380" width="235" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo9-pO-m6Y">
+                                <rect key="frame" x="122" y="270" width="235" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nqE-wX-9xG"/>
                     </view>
                     <navigationItem key="navigationItem" id="kCp-Oa-TVl"/>
                     <connections>
+                        <outlet property="emailField" destination="lo9-pO-m6Y" id="RGh-Kq-hqY"/>
                         <outlet property="forgotButton" destination="e23-1r-bAU" id="1CC-dQ-NSq"/>
                         <outlet property="loginButton" destination="DvT-Nh-JX3" id="SCl-de-8G9"/>
                         <outlet property="loginTitle" destination="W4W-nF-rzd" id="62y-5u-gfS"/>
                         <outlet property="passwordField" destination="vGw-If-Dah" id="2tq-Rw-spP"/>
-                        <outlet property="passwordLabel" destination="6dq-aI-5Vc" id="chY-sh-s9S"/>
                         <outlet property="regisButton" destination="xtD-hb-Yia" id="fvU-Xq-fdy"/>
-                        <outlet property="userField" destination="lo9-pO-m6Y" id="Q6z-ef-QXC"/>
-                        <outlet property="userLabel" destination="r80-1O-sYd" id="fTf-YT-1oW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zY8-cF-7YM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.59999999999999" y="641.82908545727139"/>
+            <point key="canvasLocation" x="149.27536231884059" y="641.51785714285711"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="MdL-VK-kLj">
@@ -211,7 +203,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Completado"/>
                                 <connections>
-                                    <action selector="regisnUser:" destination="ByD-aH-rIw" eventType="touchUpInside" id="Bln-kB-u81"/>
+                                    <action selector="registUser:" destination="ByD-aH-rIw" eventType="touchUpInside" id="jtk-XX-H1c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -346,7 +338,11 @@
                         <viewLayoutGuide key="safeArea" id="wgw-MG-zgd"/>
                     </view>
                     <navigationItem key="navigationItem" id="FU1-Wf-FFo">
-                        <barButtonItem key="leftBarButtonItem" title="Cerrar sesión" id="J3m-LH-tnU"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cerrar sesión" id="J3m-LH-tnU">
+                            <connections>
+                                <action selector="logout:" destination="jLU-bY-HLD" id="Z0W-Ov-wts"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+ Nuevo curso" id="Aht-YY-is5">
                             <connections>
                                 <segue destination="g1E-Fa-04h" kind="show" id="Bm5-Fh-Dgb"/>
@@ -570,5 +566,7 @@
         <image name="book-1" width="48" height="48"/>
         <image name="ellipsis-1" width="48" height="48"/>
         <image name="exam-1" width="48" height="48"/>
+        <image name="icon-user-14.jpg" width="2232" height="1902"/>
+        <image name="padlock" width="372" height="512"/>
     </resources>
 </document>

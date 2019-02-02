@@ -51,7 +51,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="completedSwitch" destination="VXC-6p-Gzi" id="FuE-Cm-YlK"/>
-                <outlet property="dateTimeLabel" destination="StT-vm-VBf" id="429-fn-5IZ"/>
+                <outlet property="dateTime" destination="StT-vm-VBf" id="429-fn-5IZ"/>
                 <outlet property="titleLabel" destination="Dj5-kv-tvg" id="cMl-Q9-LcB"/>
             </connections>
             <point key="canvasLocation" x="139.19999999999999" y="79.610194902548727"/>

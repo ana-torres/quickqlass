@@ -12,9 +12,7 @@ import FirebaseAuth
 class LoginViewController: BaseViewController {
     
     @IBOutlet weak var loginTitle: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var regisButton: UIButton!
@@ -26,8 +24,6 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
 
         loginTitle.mainLabel()
-        emailLabel.fieldLabel()
-        passwordLabel.fieldLabel()
         emailField.mainField()
         passwordField.mainField()
         loginButton.mainButton()
