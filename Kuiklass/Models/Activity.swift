@@ -11,9 +11,9 @@ import FirebaseDatabase
 struct Activity {
     
     let ref: DatabaseReference?
-    let uid: String
+    //let uid: String
     var name: String
-    var date: Date
+    var date: String
    // var date: String
    // var time: String
     //var idCourse: String
@@ -21,9 +21,9 @@ struct Activity {
     var completed: Bool
     
     // Constructor estandar
-    init(_ uid: String = "", _ name: String, _ idCourse: String, _ date: Date, _ completed: Bool /*_ categ: String*/) {
+    init(/*_ uid: String = "",*/ _ name: String, /*_ idCourse: String,*/ _ date: String, _ completed: Bool /*_ categ: String*/) {
         self.ref = nil
-        self.uid = uid
+        //self.uid = uid
         self.name = name
         self.date = date
         //self.time = time
@@ -38,7 +38,7 @@ struct Activity {
             let value = snapshot.value as? [String: AnyObject],
             //let uid = value["uid"] as? String,
             let name = value["name"] as? String,
-            let date = value["date"] as? Date,
+            let date = value["date"] as? String,
             //let time = value["time"] as? String,
             //let idCourse = value["idCourse"] as? String,
            // let categ = value["categ"] as? String
@@ -48,7 +48,7 @@ struct Activity {
         }
         
         self.ref = snapshot.ref
-        self.uid = snapshot.key
+        //self.uid = snapshot.key
         self.name = name
         self.date = date
         //self.time = time
@@ -61,7 +61,7 @@ struct Activity {
     // funcion para escribir en firebase de manera sencilla
     func toAnyObject() -> Any {
         return [
-            "uid": uid,
+            //"uid": uid,
             "name": name,
             "date": date,
             //"time": time,

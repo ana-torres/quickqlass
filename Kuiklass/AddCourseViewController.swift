@@ -13,12 +13,15 @@ class AddCourseViewController: BaseViewController {
     
     @IBOutlet weak var courseName: UITextField!
     @IBOutlet weak var courseDescription: UITextField!
+    @IBOutlet weak var addButton: UIButton!
     
     var ref: DatabaseReference?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addButton.mainButton()
+        
 
        // let user = Auth.auth().currentUser
         ref = Database.database().reference(withPath: "courses")
@@ -31,8 +34,6 @@ class AddCourseViewController: BaseViewController {
         
         loadingShow()
         
-//        guard let courseName = courseName.text else {return}
-//        guard let courseDescription = courseDescription.text else {return}
 //
         //let user = Auth.auth().currentUser
         guard let courseName = courseName.text else { return }
