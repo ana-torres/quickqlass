@@ -18,17 +18,24 @@ class ActivitiesTableViewController: BaseViewController, UITableViewDelegate, UI
     let xibCell = "ActivityTableViewCell"
     var activities : [Activity] = []
     var ref: DatabaseReference?
-
+//
+//
+//
+//    @objc func addTapped(){
+//
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+    
+        
         tableView.register(UINib(nibName: xibCell, bundle: nil), forCellReuseIdentifier: idCell)
         
-//        ref = Database.database().reference(withPath:"courses").child("activities")
-        
+        ref = Database.database().reference(withPath: "courses").child("activities")
         
         ref?.queryOrdered(byChild: "completed").queryEqual(toValue : false).observe(.value, with: { snapshot in
             var newItems: [Activity] = []

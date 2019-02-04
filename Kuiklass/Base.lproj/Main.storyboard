@@ -78,7 +78,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Regístrate"/>
                                 <connections>
-                                    <segue destination="ByD-aH-rIw" kind="show" id="2Q2-J2-7ap"/>
+                                    <segue destination="ByD-aH-rIw" kind="show" id="nNj-jj-67D"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-user-14.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vZ9-hR-e5h">
@@ -299,7 +299,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9c-v6-Jja" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894" y="888"/>
+            <point key="canvasLocation" x="-732" y="642"/>
         </scene>
         <!--Cursos-->
         <scene sceneID="gYK-pR-XtE">
@@ -316,11 +316,11 @@
                                     <size key="itemSize" width="176" height="122"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CourseCell" id="r0X-pQ-ayo">
-                                        <rect key="frame" x="0.0" y="0.0" width="176" height="122"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CourseCell" id="r0X-pQ-ayo">
+                                        <rect key="frame" x="10" y="10" width="176" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="176" height="122"/>
@@ -357,7 +357,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="courseTable" destination="I0h-Af-WfF" id="lrW-e8-4Rq"/>
-                        <segue destination="FJz-iX-7iw" kind="show" identifier="activities" id="eXI-uJ-vRl"/>
+                        <segue destination="3jj-vm-NPe" kind="show" identifier="activities" id="4De-X8-EbX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgS-B8-KVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -423,7 +423,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulr-7i-wFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4480" y="846"/>
+            <point key="canvasLocation" x="4480" y="747"/>
         </scene>
         <!--Add Activity View Controller-->
         <scene sceneID="j0f-go-yhQ">
@@ -448,18 +448,11 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="es"/>
                                 <connections>
-                                    <action selector="datePickerChanged:" destination="dEf-BT-WhW" eventType="valueChanged" id="4Ej-XG-MNY"/>
+                                    <action selector="datePickerChanged:" destination="dEf-BT-WhW" eventType="valueChanged" id="Xfx-2V-wZ1"/>
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvk-gq-e1F">
-                                <rect key="frame" x="43" y="169" width="43" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3l-Yg-5bY">
-                                <rect key="frame" x="43" y="253" width="47" height="21"/>
+                                <rect key="frame" x="30" y="149" width="112" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -477,24 +470,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Añadir"/>
                                 <connections>
-                                    <action selector="addActivity:" destination="dEf-BT-WhW" eventType="touchUpInside" id="Xrm-Iw-QKx"/>
+                                    <action selector="addActivity:" destination="dEf-BT-WhW" eventType="touchUpInside" id="fhY-WS-0Qc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3l-Yg-5bY">
+                                <rect key="frame" x="30" y="244" width="112" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="quD-lP-hDx"/>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="f02-u9-QR1" id="PNi-zZ-LIv"/>
-                        <outlet property="dateLabel" destination="b3l-Yg-5bY" id="ygU-Sh-7Ni"/>
-                        <outlet property="datePicker" destination="23f-oI-wdy" id="pvU-tp-03Y"/>
-                        <outlet property="name" destination="ce6-oj-BN2" id="3Np-MQ-jvc"/>
-                        <outlet property="nameLabel" destination="Uvk-gq-e1F" id="BeX-ZG-FBk"/>
+                        <outlet property="activityName" destination="ce6-oj-BN2" id="izv-mx-rYF"/>
+                        <outlet property="addButton" destination="f02-u9-QR1" id="Zyh-MN-VDS"/>
+                        <outlet property="dateLabel" destination="k2i-l7-Nul" id="Qo0-MK-NGj"/>
+                        <outlet property="datePicker" destination="23f-oI-wdy" id="anw-t2-Keb"/>
+                        <outlet property="dateTimeLabel" destination="b3l-Yg-5bY" id="3d7-2H-uHl"/>
+                        <outlet property="nameLabel" destination="Uvk-gq-e1F" id="1Dz-ar-GC4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hW3-0L-Nb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5672" y="846"/>
+            <point key="canvasLocation" x="5569.5652173913049" y="497.54464285714283"/>
         </scene>
         <!--Otros-->
         <scene sceneID="Q8e-dg-q9J">
@@ -585,7 +586,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INK-3q-yBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="846"/>
+            <point key="canvasLocation" x="1012" y="746"/>
         </scene>
         <!--Tab Controller-->
         <scene sceneID="gFW-q5-piC">
@@ -601,11 +602,12 @@
                         <segue destination="FJz-iX-7iw" kind="relationship" relationship="viewControllers" id="NG9-V7-KI1"/>
                         <segue destination="od6-qv-07Z" kind="relationship" relationship="viewControllers" id="C1D-qd-0Sg"/>
                         <segue destination="xgE-qZ-PfX" kind="relationship" relationship="viewControllers" id="elj-0v-YHw"/>
+                        <segue destination="dEf-BT-WhW" kind="show" identifier="addActivity" id="HJN-cx-IkK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cj1-Kq-Qpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3030" y="1197"/>
+            <point key="canvasLocation" x="3116" y="747"/>
         </scene>
     </scenes>
     <resources>
@@ -615,7 +617,4 @@
         <image name="icon-user-14.jpg" width="2232" height="1902"/>
         <image name="padlock" width="372" height="512"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="eXI-uJ-vRl"/>
-    </inferredMetricsTieBreakers>
 </document>

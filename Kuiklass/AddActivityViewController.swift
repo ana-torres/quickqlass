@@ -24,9 +24,11 @@ class AddActivityViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nameLabel.mainLabel()
-        dateTimeLabel.mainLabel()
+        nameLabel.fieldLabel()
+        dateTimeLabel.fieldLabel()
         addButton.mainButton()
+        activityName.mainField()
+        
         
         ref = Database.database().reference(withPath: "activities")
         

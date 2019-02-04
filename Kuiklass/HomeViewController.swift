@@ -74,7 +74,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         return cell
     }
     
-    func collectionView(_ c0ollectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.calculateWith()
         return CGSize(width: width, height: width)
     }
@@ -100,11 +100,12 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "activities"{
 
-            let destViewController = segue.destination as! ActivitiesTableViewController
+            let destViewController = segue.destination as! TabController
+            
 
             if let itemIndex = courseTable.indexPathsForSelectedItems?.first?.item {
                 let selectedItem = self.items?[itemIndex]
-                destViewController.activities = selectedItem!.toAnyObject() as! [Activity]
+                destViewController.activities = selectedItem!.activities
             }
 
         }

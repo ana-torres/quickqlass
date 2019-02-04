@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1117F3122083B3700E4FBB6 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F3022083B3700E4FBB6 /* TabController.swift */; };
 		A14CC86721F3B869002C4DD2 /* ActivitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */; };
 		A14CC86A21F3BB79002C4DD2 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */; };
 		A14CC86B21F3BB79002C4DD2 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		0F66BAA1C2234F29613FE606 /* Pods_Kuiklass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kuiklass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		333EDAA7EBECDFCD561BA160 /* Pods-Kuiklass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuiklass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kuiklass/Pods-Kuiklass.debug.xcconfig"; sourceTree = "<group>"; };
+		A1117F3022083B3700E4FBB6 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewController.swift; sourceTree = "<group>"; };
 		A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				A1C28BAB21EE2F53004E6A23 /* AddActivityViewController.swift */,
 				A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */,
 				A195169421FCBEBB00B7D03D /* BaseViewController.swift */,
+				A1117F3022083B3700E4FBB6 /* TabController.swift */,
 			);
 			path = Kuiklass;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				A195169521FCBEBB00B7D03D /* BaseViewController.swift in Sources */,
 				A1C28B2C21E89406004E6A23 /* Intro1ViewController.swift in Sources */,
 				A1C28B3421E89518004E6A23 /* Utilities.swift in Sources */,
+				A1117F3122083B3700E4FBB6 /* TabController.swift in Sources */,
 				A1C28B2E21E89428004E6A23 /* Intro2ViewController.swift in Sources */,
 				A1EF5C3922026ECD007354E7 /* User.swift in Sources */,
 				A1C28B1C21E772ED004E6A23 /* RegisterViewController.swift in Sources */,

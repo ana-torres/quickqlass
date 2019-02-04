@@ -18,12 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splashQuickqlass" translatesAutoresizingMaskIntoConstraints="NO" id="aXu-DC-471">
-                                <rect key="frame" x="65" y="410" width="285" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashQuickQlass2" translatesAutoresizingMaskIntoConstraints="NO" id="aXu-DC-471">
+                                <rect key="frame" x="38" y="82" width="338" height="742"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aXu-DC-471" secondAttribute="trailing" constant="38" id="JYS-mB-u14"/>
+                            <constraint firstItem="aXu-DC-471" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="kU5-Bg-edf"/>
+                            <constraint firstItem="aXu-DC-471" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="q9k-Ra-GHc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aXu-DC-471" secondAttribute="bottom" constant="38" id="wWk-9S-xU1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splashQuickqlass" width="1191" height="215"/>
+        <image name="splashQuickQlass2" width="1152" height="172"/>
     </resources>
 </document>

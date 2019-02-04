@@ -13,11 +13,13 @@ class CourseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var courseImage: UIImageView!
     @IBOutlet weak var courseName: UILabel!
     @IBOutlet weak var courseDescription: UILabel!
+    @IBOutlet weak var mainView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // Initialization code
+        mainView.backgroundColor = UIColor.clear
+        
     }
     
     func setUpViews() {

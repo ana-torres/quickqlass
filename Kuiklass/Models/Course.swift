@@ -16,7 +16,7 @@ struct Course {
     var name: String
     var image: String
     var description: String
-    //var activities: [Activity]
+    var activities: [Activity] = []
     //let userId: String
     // Constructor estandar
     init(_ name: String,_ description: String, _ image: String = ""/*, _ activities: [Activity] = [], _ userId: String*/) {

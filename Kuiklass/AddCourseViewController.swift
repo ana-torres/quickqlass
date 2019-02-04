@@ -44,7 +44,7 @@ class AddCourseViewController: BaseViewController {
 //       Anotaciones de un ejemplo self.ref.child("users").child(self.user.uid).child("items").childByAutoId().child("title").setValue(userInput)
         
         //let key = self.ref?.child("courses").child("users").childByAutoId().key
-        let key = self.ref?.child("courses").childByAutoId().key
+        let key = self.ref?.child("courses").child("users").childByAutoId().key
 
         
         self.ref?.updateChildValues(["\(key!)": courseItem.toAnyObject()], withCompletionBlock: {error, ref in
