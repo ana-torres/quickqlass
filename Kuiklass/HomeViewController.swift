@@ -17,7 +17,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
     var xibCell = "CourseCollectionViewCell"
     var idCell = "CourseCell"
 
-    var items: [Course] = []
+    var items: [Course]?
     var ref: DatabaseReference!
 
     override func viewDidLoad() {
@@ -39,8 +39,9 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
                     let courseItem = Course(snapshot: snapshot) {
                     newItems.append(courseItem)
                 }
+                
             }
-
+            
             self.items = newItems
             self.courseTable.reloadData()
             self.courseTable.collectionViewLayout.invalidateLayout()
@@ -55,15 +56,10 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         let controller = storyboard.instantiateViewController(withIdentifier: "Login")
         self.present(controller, animated: true, completion: nil)
     }
-    
-//    func initItems(){
-//
-//        var activities1
-//
-//    }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return items?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -71,7 +67,8 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         
         cell.setUpViews()
         
-        cell.courseName.text = self.items[indexPath.row].name
+        cell.courseName.text = self.items?[indexPath.row].name
+        cell.courseDescription.text = self.items?[indexPath.row].description
 //        cell.img.image = UIImage(named: self.items?[indexPath.row].image ?? "")
         
         return cell
@@ -106,8 +103,8 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
             let destViewController = segue.destination as! ActivitiesTableViewController
 
             if let itemIndex = courseTable.indexPathsForSelectedItems?.first?.item {
-                let selectedItem = self.items[itemIndex]
-                destViewController.activities = selectedItem.activities
+                let selectedItem = self.items?[itemIndex]
+                destViewController.activities = selectedItem!.toAnyObject() as! [Activity]
             }
 
         }

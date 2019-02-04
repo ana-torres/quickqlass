@@ -43,9 +43,8 @@ class RegisterViewController: BaseViewController {
         termsLabel.fieldLabel()
         completeButton.mainButton()
         
-        ref = Database.database().reference()
+        ref = Database.database().reference(withPath: "users")
         
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func registUser(_ sender: Any) {
@@ -111,8 +110,6 @@ class RegisterViewController: BaseViewController {
             //            self.ref.child("users").child(user.uid).setValue(["name": self.nameField.text, "surname": self.surnameField.text, "email": self.emailField.text])
             
         }
- 
-//        let registro = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home") as! HomeViewController
 //
 //        self.navigationController?.pushViewController(registro, animated: true)
  

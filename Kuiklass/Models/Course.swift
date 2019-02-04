@@ -12,21 +12,21 @@ import FirebaseDatabase
 struct Course {
     
     var ref: DatabaseReference?
-   // var key/*cid*/: String
+   // var key: String
     var name: String
     var image: String
     var description: String
-    var activities: [Activity]
+    //var activities: [Activity]
     //let userId: String
     // Constructor estandar
-    init(/*_ key: String = "",*/ _ name: String,_ description: String, _ image: String = "", _ activities: [Activity] = []/*, _ userId: String*/) {
+    init(_ name: String,_ description: String, _ image: String = ""/*, _ activities: [Activity] = [], _ userId: String*/) {
         self.ref = nil
         //self.key = key
         self.name = name
         self.image = image
         self.description = description
         //self.userId = userId
-        self.activities = activities
+       // self.activities = activities
     }
     
     // constructor para leer de firebase
@@ -36,8 +36,8 @@ struct Course {
             //let uid = value["uid"] as? String,
             let name = value["name"] as? String,
             let description = value["description"] as? String,
-            let image = value["image"] as? String,
-            var activities = value ["activities"] as? [Activity]
+            let image = value["image"] as? String
+            //let activities = value ["activities"] as? [Activity]
             //let userId = value ["userId"] as? String
             else {
                 return nil
@@ -48,7 +48,7 @@ struct Course {
         self.name = name
         self.image = image
         self.description = description
-        self.activities = activities
+        //self.activities = activities
         //self.userId = userId
     }
     
@@ -56,11 +56,11 @@ struct Course {
     // funcion para escribir en firebase de manera sencilla
     func toAnyObject() -> Any {
         return [
-            //"key": key,
             "name": name,
+            //"key": key,
             "image": image,
             "description": description,
-            "activities": activities
+            //"activities": activities
             //"userId" : userId
         ]
     }

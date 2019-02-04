@@ -27,6 +27,8 @@ class ActivitiesTableViewController: BaseViewController, UITableViewDelegate, UI
         
         tableView.register(UINib(nibName: xibCell, bundle: nil), forCellReuseIdentifier: idCell)
         
+//        ref = Database.database().reference(withPath:"courses").child("activities")
+        
         
         ref?.queryOrdered(byChild: "completed").queryEqual(toValue : false).observe(.value, with: { snapshot in
             var newItems: [Activity] = []
