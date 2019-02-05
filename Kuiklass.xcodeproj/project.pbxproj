@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A1117F3122083B3700E4FBB6 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F3022083B3700E4FBB6 /* TabController.swift */; };
 		A1117F352209990900E4FBB6 /* ImportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F342209990900E4FBB6 /* ImportInfo.swift */; };
+		A1117F392209C3A500E4FBB6 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F382209C3A500E4FBB6 /* Enum.swift */; };
 		A14CC86721F3B869002C4DD2 /* ActivitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */; };
 		A14CC86A21F3BB79002C4DD2 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */; };
 		A14CC86B21F3BB79002C4DD2 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */; };
@@ -43,6 +44,7 @@
 		333EDAA7EBECDFCD561BA160 /* Pods-Kuiklass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuiklass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kuiklass/Pods-Kuiklass.debug.xcconfig"; sourceTree = "<group>"; };
 		A1117F3022083B3700E4FBB6 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		A1117F342209990900E4FBB6 /* ImportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportInfo.swift; sourceTree = "<group>"; };
+		A1117F382209C3A500E4FBB6 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewController.swift; sourceTree = "<group>"; };
 		A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				A1C28B9E21EE1AFB004E6A23 /* Course.swift */,
 				A1C28BA821EE2BD1004E6A23 /* Activity.swift */,
 				A1EF5C3822026ECD007354E7 /* User.swift */,
+				A1117F382209C3A500E4FBB6 /* Enum.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				A1C28B2C21E89406004E6A23 /* Intro1ViewController.swift in Sources */,
 				A1C28B3421E89518004E6A23 /* Utilities.swift in Sources */,
 				A1117F3122083B3700E4FBB6 /* TabController.swift in Sources */,
+				A1117F392209C3A500E4FBB6 /* Enum.swift in Sources */,
 				A1C28B2E21E89428004E6A23 /* Intro2ViewController.swift in Sources */,
 				A1EF5C3922026ECD007354E7 /* User.swift in Sources */,
 				A1117F352209990900E4FBB6 /* ImportInfo.swift in Sources */,

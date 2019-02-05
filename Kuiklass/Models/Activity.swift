@@ -15,19 +15,15 @@ struct Activity {
     var name: String
     var date: String
     var completed: Bool
-//    enum Category: String {
-//        case Class
-//        case Exam
-//        case Exercise
-//    }
+    var category: String = ""
     
     // Constructor estandar
-    init(/*_ uid: String = "",*/ _ name: String, /*_ idCourse: String,*/ _ date: String, _ completed: Bool /*_ categ: String*/) {
+    init(/*_ uid: String = "",*/ _ name: String, /*_ idCourse: String,*/ _ date: String, _ completed: Bool, _ category: String) {
         self.ref = nil
         self.name = name
         self.date = date
-     //   self.categ = categ
         self.completed = completed
+        self.category = category
     }
     
     // constructor para leer de firebase
@@ -36,7 +32,7 @@ struct Activity {
             let value = snapshot.value as? [String: AnyObject],
             let name = value["name"] as? String,
             let date = value["date"] as? String,
-           // let categ = value["categ"] as? String
+            let category = value["category"] as? String,
             let completed = value["completed"] as? Bool
             else {
                 return nil
@@ -45,7 +41,7 @@ struct Activity {
         self.ref = snapshot.ref
         self.name = name
         self.date = date
-        //self.categ = categ
+        self.category = category
         self.completed = completed
     
 }
@@ -55,7 +51,7 @@ struct Activity {
         return [
             "name": name,
             "date": date,
-           // "categ": categ
+            "category": category,
             "completed": completed
         ]
     }
