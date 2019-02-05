@@ -10,6 +10,8 @@
 		A1117F3122083B3700E4FBB6 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F3022083B3700E4FBB6 /* TabController.swift */; };
 		A1117F352209990900E4FBB6 /* ImportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F342209990900E4FBB6 /* ImportInfo.swift */; };
 		A1117F392209C3A500E4FBB6 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F382209C3A500E4FBB6 /* Enum.swift */; };
+		A1117F3F220A4FB400E4FBB6 /* ExamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F3E220A4FB400E4FBB6 /* ExamsTableViewController.swift */; };
+		A1117F41220A4FEC00E4FBB6 /* OthersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F40220A4FEC00E4FBB6 /* OthersTableViewController.swift */; };
 		A14CC86721F3B869002C4DD2 /* ActivitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */; };
 		A14CC86A21F3BB79002C4DD2 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */; };
 		A14CC86B21F3BB79002C4DD2 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */; };
@@ -45,6 +47,8 @@
 		A1117F3022083B3700E4FBB6 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		A1117F342209990900E4FBB6 /* ImportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportInfo.swift; sourceTree = "<group>"; };
 		A1117F382209C3A500E4FBB6 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		A1117F3E220A4FB400E4FBB6 /* ExamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsTableViewController.swift; sourceTree = "<group>"; };
+		A1117F40220A4FEC00E4FBB6 /* OthersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersTableViewController.swift; sourceTree = "<group>"; };
 		A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewController.swift; sourceTree = "<group>"; };
 		A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				A195169421FCBEBB00B7D03D /* BaseViewController.swift */,
 				A1117F3022083B3700E4FBB6 /* TabController.swift */,
 				A1117F342209990900E4FBB6 /* ImportInfo.swift */,
+				A1117F3E220A4FB400E4FBB6 /* ExamsTableViewController.swift */,
+				A1117F40220A4FEC00E4FBB6 /* OthersTableViewController.swift */,
 			);
 			path = Kuiklass;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				A1117F352209990900E4FBB6 /* ImportInfo.swift in Sources */,
 				A1C28B1C21E772ED004E6A23 /* RegisterViewController.swift in Sources */,
 				A14CC86A21F3BB79002C4DD2 /* ActivityTableViewCell.swift in Sources */,
+				A1117F41220A4FEC00E4FBB6 /* OthersTableViewController.swift in Sources */,
 				A1C28B3021E89433004E6A23 /* Intro3ViewController.swift in Sources */,
 				A1C28B1A21E772E3004E6A23 /* LoginViewController.swift in Sources */,
 				A1C28B0821E77234004E6A23 /* AppDelegate.swift in Sources */,
@@ -337,6 +344,7 @@
 				A1C28B2A21E893E7004E6A23 /* MainPageViewController.swift in Sources */,
 				A1C28B1E21E772FD004E6A23 /* HomeViewController.swift in Sources */,
 				A14CC86721F3B869002C4DD2 /* ActivitiesTableViewController.swift in Sources */,
+				A1117F3F220A4FB400E4FBB6 /* ExamsTableViewController.swift in Sources */,
 				A1C28BAC21EE2F53004E6A23 /* AddActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -371,7 +371,7 @@
         <!--Exámenes-->
         <scene sceneID="84e-nr-P9y">
             <objects>
-                <tableViewController id="od6-qv-07Z" sceneMemberID="viewController">
+                <tableViewController id="od6-qv-07Z" customClass="ExamsTableViewController" customModule="Kuiklass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TVz-JS-1R4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -392,6 +392,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Exámenes" image="exam-1" id="XgG-v3-prZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="TVz-JS-1R4" id="7os-xT-YXK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYB-tR-qpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -518,7 +521,7 @@
         <!--Otros-->
         <scene sceneID="Q8e-dg-q9J">
             <objects>
-                <tableViewController id="xgE-qZ-PfX" sceneMemberID="viewController">
+                <tableViewController id="xgE-qZ-PfX" customClass="OthersTableViewController" customModule="Kuiklass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mSm-NH-u6v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -539,6 +542,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Otros" image="ellipsis-1" id="AWN-73-5N8"/>
+                    <connections>
+                        <outlet property="tableView" destination="mSm-NH-u6v" id="ikZ-xx-DwW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2k1-A1-zNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
