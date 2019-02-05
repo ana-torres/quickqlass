@@ -19,6 +19,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
 
     var items: [Course]?
     var ref: DatabaseReference!
+    let importInfo = ImportInfo.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,6 +109,8 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
             if let itemIndex = courseTable.indexPathsForSelectedItems?.first?.item {
                 let selectedItem = self.items?[itemIndex]
                 destViewController.activities = selectedItem!.activities
+                importInfo.currentCourse = selectedItem?.ref
+                
             }
 
         }

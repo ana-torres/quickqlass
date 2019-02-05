@@ -20,6 +20,7 @@ class AddActivityViewController: BaseViewController {
     @IBOutlet weak var addButton: UIButton!
     
     var ref: DatabaseReference!
+    let importInfo = ImportInfo.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,12 @@ class AddActivityViewController: BaseViewController {
         addButton.mainButton()
         activityName.mainField()
         
+        let user = Auth.auth().currentUser
         
-        ref = Database.database().reference(withPath: "activities")
+        //aqui es en la rama en la que se escribe de Firebase
+    
+        
+        ref = Database.database().reference(withPath: "courses").child(user!.uid).child((importInfo.currentCourse?.key)!)
         
         datePicker.addTarget(self, action: #selector(AddActivityViewController.datePickerChanged), for: UIControl.Event.valueChanged)
         
@@ -45,8 +50,11 @@ class AddActivityViewController: BaseViewController {
         
         let activityItem = Activity(activityName, activityDate, false)
         
-        let key = self.ref?.childByAutoId().key
-        self.ref?.updateChildValues(["\(key!)": activityItem.toAnyObject()], withCompletionBlock: {error, ref in
+        let user = Auth.auth().currentUser
+        
+        let key = self.ref?.child("courses").child(user!.uid).child((importInfo.currentCourse?.key)!).childByAutoId().key
+        
+        self.ref?.child("activities").updateChildValues(["\(key!)": activityItem.toAnyObject()], withCompletionBlock: {error, ref in
             
             self.alertLoading.dismiss(animated: true, completion: {
             self.navigationController?.popViewController(animated: true)
@@ -69,9 +77,6 @@ class AddActivityViewController: BaseViewController {
         let strDate = dateFormatter.string(from: datePicker.date)
         dateLabel.text = strDate
     }
-
-
-
 
 }
 

@@ -14,10 +14,11 @@ class ActivitiesTableViewController: BaseViewController, UITableViewDelegate, UI
     
     @IBOutlet weak var tableView: UITableView!
     
-    let idCell = "ActivityCell"
+    let idCell = "activityCell"
     let xibCell = "ActivityTableViewCell"
     var activities : [Activity] = []
     var ref: DatabaseReference?
+    var importInfo = ImportInfo.shared
 //
 //
 //
@@ -30,12 +31,12 @@ class ActivitiesTableViewController: BaseViewController, UITableViewDelegate, UI
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
     
         
         tableView.register(UINib(nibName: xibCell, bundle: nil), forCellReuseIdentifier: idCell)
         
-        ref = Database.database().reference(withPath: "activities").child("courses")
+        let user = Auth.auth().currentUser
+        ref = Database.database().reference(withPath: "courses").child(user!.uid).child((importInfo.currentCourse?.key)!).child("activities")
         
         ref?.queryOrdered(byChild: "completed").queryEqual(toValue : false).observe(.value, with: { snapshot in
             var newItems: [Activity] = []

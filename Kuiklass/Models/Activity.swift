@@ -11,23 +11,21 @@ import FirebaseDatabase
 struct Activity {
     
     let ref: DatabaseReference?
-    //let uid: String
+
     var name: String
     var date: String
-   // var date: String
-   // var time: String
-    //var idCourse: String
-    //var categ: String
     var completed: Bool
+//    enum Category: String {
+//        case Class
+//        case Exam
+//        case Exercise
+//    }
     
     // Constructor estandar
     init(/*_ uid: String = "",*/ _ name: String, /*_ idCourse: String,*/ _ date: String, _ completed: Bool /*_ categ: String*/) {
         self.ref = nil
-        //self.uid = uid
         self.name = name
         self.date = date
-        //self.time = time
-        //self.idCourse = idCourse
      //   self.categ = categ
         self.completed = completed
     }
@@ -36,11 +34,8 @@ struct Activity {
     init?(snapshot: DataSnapshot) {
         guard
             let value = snapshot.value as? [String: AnyObject],
-            //let uid = value["uid"] as? String,
             let name = value["name"] as? String,
             let date = value["date"] as? String,
-            //let time = value["time"] as? String,
-            //let idCourse = value["idCourse"] as? String,
            // let categ = value["categ"] as? String
             let completed = value["completed"] as? Bool
             else {
@@ -48,11 +43,8 @@ struct Activity {
         }
         
         self.ref = snapshot.ref
-        //self.uid = snapshot.key
         self.name = name
         self.date = date
-        //self.time = time
-        //self.idCourse = idCourse
         //self.categ = categ
         self.completed = completed
     
@@ -61,11 +53,8 @@ struct Activity {
     // funcion para escribir en firebase de manera sencilla
     func toAnyObject() -> Any {
         return [
-            //"uid": uid,
             "name": name,
             "date": date,
-            //"time": time,
-            //"idCourse": idCourse,
            // "categ": categ
             "completed": completed
         ]
