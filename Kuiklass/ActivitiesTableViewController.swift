@@ -38,7 +38,7 @@ class ActivitiesTableViewController: BaseViewController, UITableViewDelegate, UI
         let user = Auth.auth().currentUser
         ref = Database.database().reference(withPath: "courses").child(user!.uid).child((importInfo.currentCourse?.key)!).child("activities")
         
-        ref?.queryOrdered(byChild: "completed").queryEqual(toValue : false).observe(.value, with: { snapshot in
+        ref?.queryOrdered(byChild: "completed").queryEqual(toValue: false).observe(.value, with: { snapshot in
             var newItems: [Activity] = []
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot,

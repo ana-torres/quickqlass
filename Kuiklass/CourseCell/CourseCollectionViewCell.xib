@@ -26,23 +26,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="110"/>
                                 <color key="backgroundColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJj-s3-DTQ">
-                                <rect key="frame" x="15" y="28" width="130" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJj-s3-DTQ">
+                                <rect key="frame" x="15" y="17" width="130" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="MbQ-iP-xfO"/>
-                                    <constraint firstAttribute="width" secondItem="JJj-s3-DTQ" secondAttribute="height" multiplier="130:21" id="g3E-Co-y0F"/>
+                                    <constraint firstAttribute="width" secondItem="JJj-s3-DTQ" secondAttribute="height" multiplier="130:21" constant="-68.095238095238102" id="g3E-Co-y0F"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL7-Lc-Iou">
-                                <rect key="frame" x="59" y="57" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL7-Lc-Iou">
+                                <rect key="frame" x="15" y="57" width="130" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="gL7-Lc-Iou" secondAttribute="height" multiplier="2:1" id="A14-hm-djv"/>
-                                    <constraint firstAttribute="width" constant="42" id="kXa-Ic-owL"/>
+                                    <constraint firstAttribute="width" secondItem="gL7-Lc-Iou" secondAttribute="height" multiplier="2:1" constant="88" id="A14-hm-djv"/>
+                                    <constraint firstAttribute="width" constant="130" id="kXa-Ic-owL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -50,8 +50,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Lgx-3c-fJu" secondAttribute="trailing" id="2DB-fh-kdi"/>
-                            <constraint firstItem="JJj-s3-DTQ" firstAttribute="top" secondItem="yfg-lx-5xP" secondAttribute="top" constant="28" id="Lmt-80-2Mp"/>
-                            <constraint firstItem="gL7-Lc-Iou" firstAttribute="leading" secondItem="Lgx-3c-fJu" secondAttribute="trailing" constant="-101" id="NVa-Pn-Eqx"/>
+                            <constraint firstItem="JJj-s3-DTQ" firstAttribute="top" secondItem="yfg-lx-5xP" secondAttribute="top" constant="17" id="Lmt-80-2Mp"/>
+                            <constraint firstItem="gL7-Lc-Iou" firstAttribute="leading" secondItem="Lgx-3c-fJu" secondAttribute="trailing" constant="-145" id="NVa-Pn-Eqx"/>
                             <constraint firstItem="Lgx-3c-fJu" firstAttribute="leading" secondItem="yfg-lx-5xP" secondAttribute="leading" id="Rvk-ph-tWi"/>
                             <constraint firstAttribute="bottom" secondItem="Lgx-3c-fJu" secondAttribute="bottom" id="d7a-mu-Nkc"/>
                             <constraint firstAttribute="trailing" secondItem="JJj-s3-DTQ" secondAttribute="trailing" constant="15" id="kff-Nd-ICZ"/>
@@ -79,7 +79,7 @@
                 <outlet property="courseName" destination="JJj-s3-DTQ" id="Xeu-Hq-hCn"/>
                 <outlet property="mainView" destination="yfg-lx-5xP" id="NSt-g5-7mK"/>
             </connections>
-            <point key="canvasLocation" x="225.59999999999999" y="88.15592203898052"/>
+            <point key="canvasLocation" x="224.63768115942031" y="87.723214285714278"/>
         </collectionViewCell>
     </objects>
 </document>
