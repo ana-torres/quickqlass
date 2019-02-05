@@ -24,7 +24,7 @@ class AddCourseViewController: BaseViewController {
         addButton.mainButton()
         
 
-       // let user = Auth.auth().currentUser
+
         ref = Database.database().reference(withPath: "courses")
         
     }
@@ -36,18 +36,17 @@ class AddCourseViewController: BaseViewController {
         loadingShow()
         
 //
-       // let user = Auth.auth().currentUser
+       let user = Auth.auth().currentUser!
+
+        
         guard let courseName = courseName.text else { return }
         guard let courseDescription = courseDescription.text else { return }
         var courseItem = Course(courseName, courseDescription)
-        
 //       Anotaciones de un ejemplo self.ref.child("users").child(self.user.uid).child("items").childByAutoId().child("title").setValue(userInput)
         
-        //let key = self.ref?.child("courses").child("users").childByAutoId().key
-        let key = self.ref?.child("courses").child("users").childByAutoId().key
-
+        let key = self.ref?.child("courses").childByAutoId().key
         
-        self.ref?.updateChildValues(["\(key!)": courseItem.toAnyObject()], withCompletionBlock: {error, ref in
+        self.ref?.child(user.uid).updateChildValues(["\(key!)": courseItem.toAnyObject()], withCompletionBlock: {error, ref in
             
                 self.alertLoading.dismiss(animated: true, completion: {
                     self.navigationController?.popViewController(animated: true)
@@ -60,5 +59,4 @@ class AddCourseViewController: BaseViewController {
             
         })
     }
-
 }

@@ -22,6 +22,8 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let user = Auth.auth().currentUser
 
         self.courseTable.delegate = self
         self.courseTable.dataSource = self
@@ -32,7 +34,7 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         
         self.courseTable?.register(UINib(nibName: xibCell, bundle: nil), forCellWithReuseIdentifier: idCell)
         
-        ref?.observe(.value, with: { snapshot in
+        ref?.child(user!.uid).observe(.value, with: { snapshot in
             var newItems: [Course] = []
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot,
