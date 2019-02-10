@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="width" constant="130" id="MbQ-iP-xfO"/>
                                     <constraint firstAttribute="width" secondItem="JJj-s3-DTQ" secondAttribute="height" multiplier="130:21" constant="-68.095238095238102" id="g3E-Co-y0F"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -42,7 +42,7 @@
                                     <constraint firstAttribute="width" secondItem="gL7-Lc-Iou" secondAttribute="height" multiplier="2:1" constant="88" id="A14-hm-djv"/>
                                     <constraint firstAttribute="width" constant="130" id="kXa-Ic-owL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>

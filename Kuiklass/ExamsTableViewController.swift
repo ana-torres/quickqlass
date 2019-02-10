@@ -81,16 +81,28 @@ class ExamsTableViewController: BaseViewController, UITableViewDataSource, UITab
     // Botones de scroll horizontal en el tableView
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteButton = UITableViewRowAction(style: .destructive, title: "Eliminar") { (action, indexPath) in
-            self.tableView.dataSource?.tableView!(self.tableView, commit: .delete, forRowAt: indexPath)
-            return
+            self.deleteAction(indexPath: indexPath)
+            
         }
         let completeButton = UITableViewRowAction(style: .normal, title: "Completar") { (action, indexPath) in
             self.tableView.dataSource?.tableView!(self.tableView, commit: .insert, forRowAt: indexPath)
-            return
         }
         
-        completeButton.backgroundColor = UIColor.green
+        deleteButton.backgroundColor = UIColor(red:0.75, green:0.10, blue:0.20, alpha:1.0)
+        completeButton.backgroundColor = UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0)
         return [deleteButton, completeButton]
+    }
+    private func deleteAction(indexPath:IndexPath) {
+        let alert = UIAlertController(title:"Eliminar",
+                                      message: "¿Eliminamos la actividad?",
+                                      preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title:"Sí", style: .default) { (action) in
+            self.tableView.dataSource?.tableView!(self.tableView, commit: .delete, forRowAt: indexPath)
+        }
+        let cancelAction = UIAlertAction(title:"No", style: .default)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        present(alert, animated:true)
     }
     
 }

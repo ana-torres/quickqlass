@@ -48,8 +48,7 @@ extension UILabel {
     func fieldLabel() {
         
         self.textColor = UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0) //(red: 0.667, green: 0.667, blue: 0.667, alpha: 1)
-        self.font = self.font.withSize(15)
-        
+        self.font = self.font.withSize(15)        
     }
     
     func mainLabel() {

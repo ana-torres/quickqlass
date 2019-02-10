@@ -15,8 +15,12 @@ class ImportInfo {
     
     var currentCourse: DatabaseReference?
     var myCurrentCourse: String?
+    var currentActivity: DatabaseReference?
+    var myCurrentActivity: String?
     
     init() {
         // don't forget to make this private
     }
 }
+
+

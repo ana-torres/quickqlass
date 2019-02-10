@@ -12,11 +12,14 @@ class ActivityTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateTimeLabel: UILabel!
-    @IBOutlet weak var completedSwitch: UISwitch!
+    @IBOutlet weak var checkButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        checkButton.setImage(UIImage(named:"check" ), for: .normal)
+        checkButton.setImage(UIImage(named:"checkok"), for: .selected)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,5 +32,18 @@ class ActivityTableViewCell: UITableViewCell {
         dateTimeLabel.text = dateTime
     }
 
+    @IBAction func checkActivity(_ sender: UIButton){
+        UIView.animate(withDuration: 0, delay: 0, options: .curveLinear, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            
+        }) { (success) in
+            UIView.animate(withDuration: 0, delay: 0, options: .curveLinear, animations: {
+                sender.isSelected = !sender.isSelected
+                sender.transform = .identity
+            }, completion: nil)
+            
+            
+        }
+    }
     
 }

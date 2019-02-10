@@ -17,7 +17,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var regisButton: UIButton!
     @IBOutlet weak var forgotButton: UIButton!
-    
+
     
     
     override func viewDidLoad() {
