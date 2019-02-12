@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10D374222117B1400BC1A55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10D374122117B1300BC1A55 /* Assets.xcassets */; };
 		A1117F3122083B3700E4FBB6 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F3022083B3700E4FBB6 /* TabController.swift */; };
 		A1117F352209990900E4FBB6 /* ImportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F342209990900E4FBB6 /* ImportInfo.swift */; };
 		A1117F392209C3A500E4FBB6 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117F382209C3A500E4FBB6 /* Enum.swift */; };
@@ -19,7 +20,6 @@
 		A195169521FCBEBB00B7D03D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A195169421FCBEBB00B7D03D /* BaseViewController.swift */; };
 		A1C28B0821E77234004E6A23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B0721E77234004E6A23 /* AppDelegate.swift */; };
 		A1C28B0D21E77234004E6A23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C28B0B21E77234004E6A23 /* Main.storyboard */; };
-		A1C28B0F21E77236004E6A23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C28B0E21E77236004E6A23 /* Assets.xcassets */; };
 		A1C28B1221E77236004E6A23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C28B1021E77236004E6A23 /* LaunchScreen.storyboard */; };
 		A1C28B1A21E772E3004E6A23 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B1921E772E3004E6A23 /* LoginViewController.swift */; };
 		A1C28B1C21E772ED004E6A23 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C28B1B21E772ED004E6A23 /* RegisterViewController.swift */; };
@@ -45,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0F66BAA1C2234F29613FE606 /* Pods_Kuiklass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kuiklass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		333EDAA7EBECDFCD561BA160 /* Pods-Kuiklass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kuiklass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kuiklass/Pods-Kuiklass.debug.xcconfig"; sourceTree = "<group>"; };
+		A10D374122117B1300BC1A55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1117F3022083B3700E4FBB6 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		A1117F342209990900E4FBB6 /* ImportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportInfo.swift; sourceTree = "<group>"; };
 		A1117F382209C3A500E4FBB6 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		A1C28B0421E77234004E6A23 /* Kuiklass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuiklass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C28B0721E77234004E6A23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C28B0C21E77234004E6A23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A1C28B0E21E77236004E6A23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1C28B1121E77236004E6A23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1C28B1321E77236004E6A23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C28B1921E772E3004E6A23 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				A1C28B9C21EE1843004E6A23 /* CourseCell */,
 				A1C28B0721E77234004E6A23 /* AppDelegate.swift */,
 				A1C28B0B21E77234004E6A23 /* Main.storyboard */,
-				A1C28B0E21E77236004E6A23 /* Assets.xcassets */,
+				A10D374122117B1300BC1A55 /* Assets.xcassets */,
 				A1C28B1021E77236004E6A23 /* LaunchScreen.storyboard */,
 				A1C28B1321E77236004E6A23 /* Info.plist */,
 				A1C28B1921E772E3004E6A23 /* LoginViewController.swift */,
@@ -255,9 +255,9 @@
 			files = (
 				A1C28B1221E77236004E6A23 /* LaunchScreen.storyboard in Resources */,
 				A1C28B7121ECDB62004E6A23 /* GoogleService-Info.plist in Resources */,
-				A1C28B0F21E77236004E6A23 /* Assets.xcassets in Resources */,
 				A1C28B0D21E77234004E6A23 /* Main.storyboard in Resources */,
 				A14CC86B21F3BB79002C4DD2 /* ActivityTableViewCell.xib in Resources */,
+				A10D374222117B1400BC1A55 /* Assets.xcassets in Resources */,
 				A1C28B9B21EE1837004E6A23 /* CourseCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +277,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -287,6 +289,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);

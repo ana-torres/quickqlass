@@ -10,7 +10,7 @@ target 'Kuiklass' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  #pod 'Kingfisher'
-  
+  pod 'Kingfisher'
+  pod 'RAMAnimatedTabBarController'
   
 end

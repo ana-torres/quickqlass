@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "exam-1.png",
+      "filename" : "house-black-silhouette-without-door-3.png",
       "scale" : "1x"
     },
     {
@@ -11,7 +11,6 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "exam-2.png",
       "scale" : "3x"
     }
   ],

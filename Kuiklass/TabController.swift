@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import RAMAnimatedTabBarController
 
-class TabController: UITabBarController {
+class TabController: RAMAnimatedTabBarController {
 
     var activities: [Activity] = []
     
@@ -17,6 +18,8 @@ class TabController: UITabBarController {
 
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
         // Do any additional setup after loading the view.
+        
+    
     }
     @objc func addTapped() {
         self.performSegue(withIdentifier: "addActivity", sender: self)

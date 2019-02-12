@@ -61,18 +61,22 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
   - IQKeyboardManagerSwift (6.2.0)
+  - Kingfisher (5.1.0)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - RAMAnimatedTabBarController (4.0.1)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - IQKeyboardManagerSwift
+  - Kingfisher
+  - RAMAnimatedTabBarController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -87,8 +91,10 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
+    - Kingfisher
     - leveldb-library
     - nanopb
+    - RAMAnimatedTabBarController
 
 SPEC CHECKSUMS:
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
@@ -102,9 +108,11 @@ SPEC CHECKSUMS:
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  RAMAnimatedTabBarController: 677d6f7ec7e88b1089486f4db49b0a5067e8ad1c
 
-PODFILE CHECKSUM: 5ac41acc79be52c116640a89465a48ef65002c41
+PODFILE CHECKSUM: 5674d540400f85d6048399899eeefcab5d8e4da7
 
 COCOAPODS: 1.5.3

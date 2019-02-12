@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import RAMAnimatedTabBarController
 
 class ActivitiesTableViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     

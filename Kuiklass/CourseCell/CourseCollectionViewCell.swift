@@ -19,6 +19,7 @@ class CourseCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         mainView.backgroundColor = UIColor.clear
+    
         
     }
     
@@ -27,7 +28,7 @@ class CourseCollectionViewCell: UICollectionViewCell {
         //Borde redondeado
         self.courseImage.layer.borderWidth = 1
         self.courseImage.layer.cornerRadius = 4
-        self.courseImage.layer.borderColor = UIColor.clear.cgColor
+        self.courseImage.layer.borderColor = UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0).cgColor
         self.courseImage.layer.masksToBounds = true
         
         //Sombreado de la celda

@@ -9,9 +9,10 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import RAMAnimatedTabBarController
 
 class ExamsTableViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
-    
+
     @IBOutlet weak var tableView: UITableView!
     
     let idCell = "activityCell"

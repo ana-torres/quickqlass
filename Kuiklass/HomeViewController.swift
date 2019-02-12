@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import RAMAnimatedTabBarController
 
 class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -115,5 +116,4 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
 
         }
     }
-    
 }

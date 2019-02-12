@@ -12,8 +12,11 @@ import FirebaseAuth
 
 class AddCourseViewController: BaseViewController {
     
+    @IBOutlet weak var ppalLabel: UILabel!
     @IBOutlet weak var courseName: UITextField!
+    @IBOutlet weak var courseLabel: UILabel!
     @IBOutlet weak var courseDescription: UITextField!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     
     var ref: DatabaseReference?
@@ -21,7 +24,13 @@ class AddCourseViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ppalLabel.mainLabel()
         addButton.mainButton()
+        courseName.mainField()
+        courseLabel.fieldLabel()
+        courseDescription.mainField()
+        descriptionLabel.fieldLabel()
         
 
 
@@ -49,7 +58,8 @@ class AddCourseViewController: BaseViewController {
         self.ref?.child(user.uid).updateChildValues(["\(key!)": courseItem.toAnyObject()], withCompletionBlock: {error, ref in
             
                 self.alertLoading.dismiss(animated: true, completion: {
-                    self.navigationController?.popViewController(animated: true)
+                    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                    self.present(controller, animated: true, completion: nil)
                 })
             
             if error != nil {
