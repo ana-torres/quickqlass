@@ -30,9 +30,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfg-lx-5xP">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="110"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lgx-3c-fJu">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lgx-3c-fJu">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="110"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJj-s3-DTQ">
                                 <rect key="frame" x="15" y="17" width="130" height="32"/>
@@ -55,7 +54,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Lgx-3c-fJu" secondAttribute="trailing" id="2DB-fh-kdi"/>
                             <constraint firstItem="JJj-s3-DTQ" firstAttribute="top" secondItem="yfg-lx-5xP" secondAttribute="top" constant="17" id="Lmt-80-2Mp"/>
@@ -72,7 +70,6 @@
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.33000000000000002" green="0.81999999999999995" blue="0.64000000000000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="yfg-lx-5xP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7V3-pv-Ic2"/>
                 <constraint firstItem="yfg-lx-5xP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GHS-L1-Jx2"/>

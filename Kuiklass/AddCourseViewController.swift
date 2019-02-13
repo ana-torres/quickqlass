@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import Kingfisher
 
 class AddCourseViewController: BaseViewController {
     
@@ -16,7 +17,13 @@ class AddCourseViewController: BaseViewController {
     @IBOutlet weak var courseLabel: UILabel!
     @IBOutlet weak var courseDescription: UITextField!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var imageUrl: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
+
+
     
     var ref: DatabaseReference?
 
@@ -30,13 +37,11 @@ class AddCourseViewController: BaseViewController {
         courseLabel.fieldLabel()
         courseDescription.mainField()
         descriptionLabel.fieldLabel()
-        
-
+        imageButton.secButton()
 
         ref = Database.database().reference(withPath: "courses")
         
     }
-    
     
     
     @IBAction func addCourse (_ sender: Any){
@@ -49,7 +54,7 @@ class AddCourseViewController: BaseViewController {
         
         guard let courseName = courseName.text else { return }
         guard let courseDescription = courseDescription.text else { return }
-        var courseItem = Course(courseName, courseDescription)
+        var courseItem = Course(courseName, courseDescription, imageUrl.text ?? "")
 //       Anotaciones de un ejemplo self.ref.child("users").child(self.user.uid).child("items").childByAutoId().child("title").setValue(userInput)
         
         let key = self.ref?.child("courses").child(user.uid).childByAutoId().key
@@ -68,4 +73,13 @@ class AddCourseViewController: BaseViewController {
             
         })
     }
+    
+    @IBAction func loadImage(_ sender: Any){
+        
+        let url = URL(string: imageUrl.text ?? "")
+        imageView.kf.setImage(with: url)
+        imageView.contentMode = .scaleAspectFit
+                
+    }
 }
+

@@ -73,7 +73,10 @@ class HomeViewController: BaseViewController, UICollectionViewDelegate, UICollec
         
         cell.courseName.text = self.items?[indexPath.row].name
         cell.courseDescription.text = self.items?[indexPath.row].description
-//        cell.img.image = UIImage(named: self.items?[indexPath.row].image ?? "")
+        
+        let url = URL(string: self.items?[indexPath.row].image ?? "")
+        cell.courseImage.kf.setImage(with: url)
+        cell.courseImage.contentMode = .scaleAspectFit
         
         return cell
     }

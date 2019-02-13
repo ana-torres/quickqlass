@@ -13,7 +13,7 @@ struct Course {
     
     var ref: DatabaseReference?
     var name: String
-    var image: String
+    var image: String?
     var description: String
     var activities: [Activity] = []
     
