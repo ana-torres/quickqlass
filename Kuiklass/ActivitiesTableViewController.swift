@@ -91,7 +91,7 @@ class ActivitiesTableViewController: BaseViewController, UITableViewDelegate, UI
         }
         let completeButton = UITableViewRowAction(style: .normal, title: "Completar") { (action, indexPath) in
             self.tableView.dataSource?.tableView!(self.tableView, commit: .insert, forRowAt: indexPath)
-          
+        
         }
         
         deleteButton.backgroundColor = UIColor(red:0.75, green:0.10, blue:0.20, alpha:1.0)

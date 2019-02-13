@@ -48,7 +48,7 @@ class LoginViewController: BaseViewController {
                 print("Error \(String(describing: error))")
             }
             
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainNav")
             self.present(controller, animated: true, completion: nil)
             
         }

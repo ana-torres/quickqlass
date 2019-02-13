@@ -56,6 +56,9 @@
 		A14CC86821F3BB79002C4DD2 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		A14CC86921F3BB79002C4DD2 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		A195169421FCBEBB00B7D03D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A1BEE82422137EC700FF53BE /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		A1BEE82522137EC900FF53BE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		A1BEE82622137F5700FF53BE /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		A1C28B0421E77234004E6A23 /* Kuiklass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuiklass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C28B0721E77234004E6A23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C28B0C21E77234004E6A23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +114,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A1BEE82122137C6500FF53BE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A1BEE82422137EC700FF53BE /* OpenSans-Bold.ttf */,
+				A1BEE82522137EC900FF53BE /* OpenSans-Regular.ttf */,
+				A1BEE82622137F5700FF53BE /* LICENSE.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		A1C28AFB21E77234004E6A23 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +145,7 @@
 		A1C28B0621E77234004E6A23 /* Kuiklass */ = {
 			isa = PBXGroup;
 			children = (
+				A1BEE82122137C6500FF53BE /* Fonts */,
 				A1C28BAA21EE2C94004E6A23 /* ActivityCell */,
 				A1C28B9D21EE1AE3004E6A23 /* Models */,
 				A1C28B9C21EE1843004E6A23 /* CourseCell */,

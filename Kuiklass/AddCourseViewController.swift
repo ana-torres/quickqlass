@@ -12,7 +12,6 @@ import FirebaseAuth
 
 class AddCourseViewController: BaseViewController {
     
-    @IBOutlet weak var ppalLabel: UILabel!
     @IBOutlet weak var courseName: UITextField!
     @IBOutlet weak var courseLabel: UILabel!
     @IBOutlet weak var courseDescription: UITextField!
@@ -25,7 +24,7 @@ class AddCourseViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ppalLabel.mainLabel()
+
         addButton.mainButton()
         courseName.mainField()
         courseLabel.fieldLabel()

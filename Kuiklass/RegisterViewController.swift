@@ -13,7 +13,6 @@ import FirebaseDatabase
 class RegisterViewController: BaseViewController {
     
 
-    @IBOutlet weak var regisLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var surnameLabel: UILabel!
@@ -31,7 +30,6 @@ class RegisterViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        regisLabel.mainLabel()
         nameLabel.fieldLabel()
         surnameLabel.fieldLabel()
         emailLabel.fieldLabel()
@@ -103,7 +101,7 @@ class RegisterViewController: BaseViewController {
                     self.showBasicAlert("Error", "Ha ocurrido un error en el registro.")
                 }
                 else {
-                    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
+                    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainNav")
                     self.present(controller, animated: true, completion: nil)
                 }
             })
