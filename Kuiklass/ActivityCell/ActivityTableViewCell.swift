@@ -12,14 +12,14 @@ class ActivityTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateTimeLabel: UILabel!
-    @IBOutlet weak var checkButton: UIButton!
+    //@IBOutlet weak var checkButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        checkButton.setImage(UIImage(named:"check" ), for: .normal)
-        checkButton.setImage(UIImage(named:"checkok"), for: .selected)
+//        checkButton.setImage(UIImage(named:"check" ), for: .normal)
+//        checkButton.setImage(UIImage(named:"checkok"), for: .selected)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

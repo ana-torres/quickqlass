@@ -335,11 +335,11 @@
             <objects>
                 <viewController storyboardIdentifier="Home" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jLU-bY-HLD" customClass="HomeViewController" customModule="Kuiklass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yk7-QX-8Za">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-Af-WfF">
-                                <rect key="frame" x="0.0" y="88" width="414" height="649"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="742"/>
                                 <color key="tintColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qNF-dL-bZD">
                                     <size key="itemSize" width="176" height="122"/>
@@ -363,7 +363,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYY-lt-bph">
-                                <rect key="frame" x="184" y="745" width="47" height="47"/>
+                                <rect key="frame" x="184" y="794" width="47" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="8lf-be-gDX"/>
                                     <constraint firstAttribute="width" secondItem="SYY-lt-bph" secondAttribute="height" multiplier="1:1" id="gnI-Au-tgK"/>
@@ -408,6 +408,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgS-B8-KVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3815.9420289855075" y="745.98214285714278"/>
+        </scene>
+        <!--Completados-->
+        <scene sceneID="hho-Rc-fbJ">
+            <objects>
+                <tableViewController title="Completados" id="gnU-AN-44i" customClass="CompletedTableViewController" customModule="Kuiklass" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xbs-3Z-bzW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vaG-0d-Te4">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vaG-0d-Te4" id="9uc-mh-bNX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gnU-AN-44i" id="oRn-Na-QUE"/>
+                            <outlet property="delegate" destination="gnU-AN-44i" id="C16-wV-Naw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Completados" id="nEF-yP-e8h">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="house-black-silhouette-without-door-3" id="wNZ-jn-kyK">
+                            <color key="tintColor" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="jLU-bY-HLD" kind="presentation" id="DwZ-2x-rdJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SKO-u3-hqX">
+                            <color key="tintColor" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="dEf-BT-WhW" kind="show" id="h1b-tr-L8e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="xbs-3Z-bzW" id="NdY-fB-srf"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsE-yq-hj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6713" y="-652"/>
         </scene>
         <!--Examenes-->
         <scene sceneID="84e-nr-P9y">
@@ -638,7 +683,7 @@
             <objects>
                 <viewController title="Nuevo curso" id="g1E-Fa-04h" customClass="AddCourseViewController" customModule="Kuiklass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J9k-O7-2fa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3TC-U0-yeD">
@@ -697,8 +742,7 @@
         <scene sceneID="Vwx-y8-fyl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zN3-Hl-zCu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exámenes" image="verified-text-paper-2" springLoaded="YES" id="XgG-v3-prZ" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <color key="badgeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <tabBarItem key="tabBarItem" title="Exámenes" image="pencil-3" selectedImage="pencil-3" springLoaded="YES" id="XgG-v3-prZ" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="textFontSize">
                                 <real key="value" value="10"/>
@@ -736,10 +780,10 @@
                 <customObject id="fs0-qa-JCD" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="value" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="value" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </customObject>
@@ -750,7 +794,7 @@
         <scene sceneID="njo-c3-jxH">
             <objects>
                 <navigationController title="Ejercicios" automaticallyAdjustsScrollViewInsets="NO" id="QfQ-vl-3eV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Actividades" image="maths-class-materials-cross-of-a-pencil-and-a-ruler-2" selectedImage="maths-class-materials-cross-of-a-pencil-and-a-ruler-2" id="KXN-Sp-Y1F" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="Actividades" image="pencil" selectedImage="pencil" id="KXN-Sp-Y1F" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <color key="badgeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="textFontSize">
@@ -788,10 +832,10 @@
                 <customObject id="Mkb-WC-45d" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="value" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="value" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </customObject>
@@ -802,7 +846,7 @@
         <scene sceneID="nB5-gl-gAz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sfh-GI-gVk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Otros" image="pin-tool-2" selectedImage="pin-tool-2" id="AWN-73-5N8" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="Otros" image="pencil-2" selectedImage="pencil-2" id="AWN-73-5N8" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <color key="badgeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="textFontSize">
@@ -840,10 +884,10 @@
                 <customObject id="CcH-78-IWI" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="value" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="value" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </customObject>
@@ -859,13 +903,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.20795257260125039" green="0.31316700347960069" blue="0.34225348500430886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="QfQ-vl-3eV" kind="relationship" relationship="viewControllers" id="8d2-Pr-BSS"/>
                         <segue destination="zN3-Hl-zCu" kind="relationship" relationship="viewControllers" id="MyQ-TC-rYe"/>
                         <segue destination="Sfh-GI-gVk" kind="relationship" relationship="viewControllers" id="nBf-kp-g7o"/>
+                        <segue destination="TxZ-xb-xlA" kind="relationship" relationship="viewControllers" id="C5e-eM-TcR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbl-De-oJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -900,19 +945,65 @@
             </objects>
             <point key="canvasLocation" x="2905.7971014492755" y="745.98214285714278"/>
         </scene>
+        <!--Completados-->
+        <scene sceneID="Uoy-FN-VZO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TxZ-xb-xlA" userLabel="Completados" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Completados" image="test" selectedImage="test" springLoaded="YES" id="kLd-6R-hCk" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="textFontSize">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="Ypy-xo-QEg" id="Ex6-cz-Qvn"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bU3-4G-Bzw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gnU-AN-44i" kind="relationship" relationship="rootViewController" id="jp2-gU-t9u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgs-Ut-1NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Ypy-xo-QEg" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="5803" y="-652"/>
+        </scene>
     </scenes>
     <resources>
         <image name="house-black-silhouette-without-door-3" width="24" height="24"/>
         <image name="icon-user-14.jpg" width="2232" height="1902"/>
-        <image name="maths-class-materials-cross-of-a-pencil-and-a-ruler-2" width="24" height="24"/>
         <image name="padlock" width="372" height="512"/>
-        <image name="pin-tool-2" width="24" height="24"/>
+        <image name="pencil" width="24" height="24"/>
+        <image name="pencil-2" width="24" height="24"/>
+        <image name="pencil-3" width="24" height="24"/>
         <image name="plus" width="125" height="125"/>
-        <image name="verified-text-paper-2" width="24" height="24"/>
+        <image name="test" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nBf-kp-g7o"/>
-        <segue reference="EpW-tr-jfq"/>
-        <segue reference="S3l-un-Wtn"/>
+        <segue reference="grW-8e-QH4"/>
+        <segue reference="eL0-aW-Dwi"/>
+        <segue reference="h1b-tr-L8e"/>
+        <segue reference="DwZ-2x-rdJ"/>
     </inferredMetricsTieBreakers>
 </document>

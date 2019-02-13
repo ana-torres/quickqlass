@@ -16,7 +16,7 @@ class TabController: RAMAnimatedTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+//            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
         // Do any additional setup after loading the view.
         
     

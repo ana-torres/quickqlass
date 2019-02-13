@@ -40,12 +40,13 @@ class AddActivityViewController: BaseViewController, UIPickerViewDelegate, UIPic
         categoryLabel.fieldLabel()
         
         categories = ["Actividad", "Examen", "Otro"]
+        activityCateg = categories[0]
         let user = Auth.auth().currentUser
         
         //aqui es en la rama en la que se escribe de Firebase
     
         
-        ref = Database.database().reference(withPath: "courses").child(user!.uid).child((importInfo.currentCourse?.key)!)
+        ref = Database.database().reference(withPath: "courses").child(user!.uid).child((importInfo.currentCourse?.key)!).child("activities")
         
         datePicker.addTarget(self, action: #selector(AddActivityViewController.datePickerChanged), for: UIControl.Event.valueChanged)
         
@@ -61,12 +62,15 @@ class AddActivityViewController: BaseViewController, UIPickerViewDelegate, UIPic
         let activityItem = Activity(activityName, activityDate, false, activityCateg)
         let user = Auth.auth().currentUser
         
-        let key = self.ref?.child("courses").child(user!.uid).child((importInfo.currentCourse?.key)!).childByAutoId().key
+        let key = self.ref?.child("courses").child(user!.uid).child((importInfo.currentCourse?.key)!).child("activities").childByAutoId().key
         
-        self.ref?.child("activities").updateChildValues(["\(key!)": activityItem.toAnyObject()], withCompletionBlock: {error, ref in
+        if (activityCateg == categories[0]) {
+       
+            self.ref?.child("category").child("exercises").updateChildValues(["\(key!)": activityItem.toAnyObject()], withCompletionBlock: {error, ref in
             
             self.alertLoading.dismiss(animated: true, completion: {
             self.navigationController?.popViewController(animated: true)
+                
             })
             
             if error != nil {
@@ -74,7 +78,35 @@ class AddActivityViewController: BaseViewController, UIPickerViewDelegate, UIPic
                 return
             }
             
-        })
+        })}
+            
+        else if (activityCateg == categories[1]) {
+            self.ref?.child("category").child("exams").updateChildValues(["\(key!)": activityItem.toAnyObject()], withCompletionBlock: {error, ref in
+                
+                self.alertLoading.dismiss(animated: true, completion: {
+                    self.navigationController?.popViewController(animated: true)
+                })
+                
+                if error != nil {
+                    print("ERROR")
+                    return
+                }
+                
+            })}
+            
+        else if (activityCateg == categories[2]) {
+            self.ref?.child("category").child("others").updateChildValues(["\(key!)": activityItem.toAnyObject()], withCompletionBlock: {error, ref in
+                
+                self.alertLoading.dismiss(animated: true, completion: {
+                    self.navigationController?.popViewController(animated: true)
+                })
+                
+                if error != nil {
+                    print("ERROR")
+                    return
+                }
+                
+            })}
     }
     
     @IBAction func datePickerChanged(_ sender: Any) {

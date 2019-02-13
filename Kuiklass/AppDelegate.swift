@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func presentHome(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc  = storyboard.instantiateViewController(withIdentifier: "Home")
+        let vc  = storyboard.instantiateViewController(withIdentifier: "mainNav")
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }

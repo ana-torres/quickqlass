@@ -1,8 +1,8 @@
 //
-//  ExamsTableViewController.swift
+//  CompletedTableViewController.swift
 //  Kuiklass
 //
-//  Created by Ana Torres Piedra on 06/02/2019.
+//  Created by Ana Torres Piedra on 13/02/2019.
 //  Copyright © 2019 Ana Torres. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import RAMAnimatedTabBarController
 
-class ExamsTableViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+class CompletedTableViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -32,9 +32,9 @@ class ExamsTableViewController: BaseViewController, UITableViewDataSource, UITab
         tableView.register(UINib(nibName: xibCell, bundle: nil), forCellReuseIdentifier: idCell)
         
         let user = Auth.auth().currentUser
-        ref = Database.database().reference(withPath: "courses").child(user!.uid).child((importInfo.currentCourse?.key)!).child("activities").child("category").child("exams")
+        ref = Database.database().reference(withPath: "courses").child(user!.uid).child((importInfo.currentCourse?.key)!).child("activities").child("category").child("exercises")
         
-        ref?.queryOrdered(byChild: "completed").queryEqual(toValue: false).observe(.value, with: { snapshot in
+        ref?.queryOrdered(byChild: "completed").queryEqual(toValue: true).observe(.value, with: { snapshot in
             var newItems: [Activity] = []
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot,
@@ -75,7 +75,7 @@ class ExamsTableViewController: BaseViewController, UITableViewDataSource, UITab
         if editingStyle == .insert {
             let item = activities[indexPath.row]
             // Actualizar en firebase la tarea a completada
-            item.ref?.updateChildValues(["completed": true])
+            item.ref?.updateChildValues(["completed": false])
         }
     }
     
@@ -83,10 +83,10 @@ class ExamsTableViewController: BaseViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteButton = UITableViewRowAction(style: .destructive, title: "Eliminar") { (action, indexPath) in
             self.deleteAction(indexPath: indexPath)
-            
         }
-        let completeButton = UITableViewRowAction(style: .normal, title: "Completar") { (action, indexPath) in
+        let completeButton = UITableViewRowAction(style: .normal, title: "Deshacer") { (action, indexPath) in
             self.tableView.dataSource?.tableView!(self.tableView, commit: .insert, forRowAt: indexPath)
+            
         }
         
         deleteButton.backgroundColor = UIColor(red:0.75, green:0.10, blue:0.20, alpha:1.0)
@@ -105,5 +105,8 @@ class ExamsTableViewController: BaseViewController, UITableViewDataSource, UITab
         alert.addAction(cancelAction)
         present(alert, animated:true)
     }
+    
+    //UIColor(red:0.94, green:0.75, blue:0.35, alpha:1.0) amarillo editar
+    
     
 }
