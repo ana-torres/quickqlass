@@ -34,21 +34,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="110"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJj-s3-DTQ">
-                                <rect key="frame" x="15" y="17" width="130" height="32"/>
+                                <rect key="frame" x="15" y="11" width="130" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="MbQ-iP-xfO"/>
-                                    <constraint firstAttribute="width" secondItem="JJj-s3-DTQ" secondAttribute="height" multiplier="130:21" constant="-68.095238095238102" id="g3E-Co-y0F"/>
+                                    <constraint firstAttribute="width" secondItem="JJj-s3-DTQ" secondAttribute="height" multiplier="130:21" constant="-222.85714285714289" id="g3E-Co-y0F"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                 <color key="textColor" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL7-Lc-Iou">
-                                <rect key="frame" x="15" y="57" width="130" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gL7-Lc-Iou" secondAttribute="height" multiplier="2:1" constant="88" id="A14-hm-djv"/>
-                                    <constraint firstAttribute="width" constant="130" id="kXa-Ic-owL"/>
-                                </constraints>
+                                <rect key="frame" x="15" y="69" width="130" height="21"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -56,15 +52,16 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Lgx-3c-fJu" secondAttribute="trailing" id="2DB-fh-kdi"/>
-                            <constraint firstItem="JJj-s3-DTQ" firstAttribute="top" secondItem="yfg-lx-5xP" secondAttribute="top" constant="17" id="Lmt-80-2Mp"/>
-                            <constraint firstItem="gL7-Lc-Iou" firstAttribute="leading" secondItem="Lgx-3c-fJu" secondAttribute="trailing" constant="-145" id="NVa-Pn-Eqx"/>
+                            <constraint firstItem="gL7-Lc-Iou" firstAttribute="trailing" secondItem="JJj-s3-DTQ" secondAttribute="trailing" id="A6o-um-yfd"/>
+                            <constraint firstAttribute="bottom" secondItem="gL7-Lc-Iou" secondAttribute="bottom" constant="20" id="CVl-xc-BIH"/>
+                            <constraint firstItem="JJj-s3-DTQ" firstAttribute="top" secondItem="yfg-lx-5xP" secondAttribute="top" constant="11" id="Lmt-80-2Mp"/>
                             <constraint firstItem="Lgx-3c-fJu" firstAttribute="leading" secondItem="yfg-lx-5xP" secondAttribute="leading" id="Rvk-ph-tWi"/>
+                            <constraint firstItem="gL7-Lc-Iou" firstAttribute="leading" secondItem="JJj-s3-DTQ" secondAttribute="leading" id="Tmo-FT-vsl"/>
                             <constraint firstAttribute="bottom" secondItem="Lgx-3c-fJu" secondAttribute="bottom" id="d7a-mu-Nkc"/>
                             <constraint firstAttribute="trailing" secondItem="JJj-s3-DTQ" secondAttribute="trailing" constant="15" id="kff-Nd-ICZ"/>
                             <constraint firstItem="Lgx-3c-fJu" firstAttribute="top" secondItem="yfg-lx-5xP" secondAttribute="top" id="l0h-jK-zLM"/>
-                            <constraint firstItem="gL7-Lc-Iou" firstAttribute="top" secondItem="JJj-s3-DTQ" secondAttribute="bottom" constant="8" id="qf5-7B-hM6"/>
-                            <constraint firstAttribute="bottom" secondItem="JJj-s3-DTQ" secondAttribute="bottom" constant="61" id="rGT-0q-o80"/>
-                            <constraint firstItem="gL7-Lc-Iou" firstAttribute="top" secondItem="Lgx-3c-fJu" secondAttribute="bottom" constant="-53" id="sF2-qT-LdR"/>
+                            <constraint firstAttribute="bottom" secondItem="JJj-s3-DTQ" secondAttribute="bottom" constant="42" id="rGT-0q-o80"/>
+                            <constraint firstItem="gL7-Lc-Iou" firstAttribute="top" secondItem="JJj-s3-DTQ" secondAttribute="bottom" constant="1" id="tAg-QX-Yjm"/>
                             <constraint firstItem="JJj-s3-DTQ" firstAttribute="leading" secondItem="yfg-lx-5xP" secondAttribute="leading" constant="15" id="zrh-sD-wFE"/>
                         </constraints>
                     </view>

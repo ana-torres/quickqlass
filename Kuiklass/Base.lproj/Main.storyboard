@@ -339,7 +339,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-Af-WfF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="742"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="698"/>
                                 <color key="tintColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qNF-dL-bZD">
                                     <size key="itemSize" width="176" height="122"/>
@@ -436,7 +436,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="house-black-silhouette-without-door-3" id="wNZ-jn-kyK">
                             <color key="tintColor" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="jLU-bY-HLD" kind="presentation" id="DwZ-2x-rdJ"/>
+                                <segue destination="EG5-IH-1RL" kind="presentation" id="MRK-Jg-Zak"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SKO-u3-hqX">
@@ -1031,8 +1031,7 @@
         <image name="test" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eL0-aW-Dwi"/>
+        <segue reference="MRK-Jg-Zak"/>
         <segue reference="h1b-tr-L8e"/>
-        <segue reference="DwZ-2x-rdJ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -34,7 +34,7 @@ class OthersTableViewController: BaseViewController, UITableViewDataSource, UITa
         let user = Auth.auth().currentUser
         ref = Database.database().reference(withPath: "courses").child(user!.uid).child((importInfo.currentCourse?.key)!).child("activities").child("category").child("others")
         
-        ref?.queryOrdered(byChild: "competed").queryEqual(toValue: false).observe(.value, with: { snapshot in
+        ref?.queryOrdered(byChild: "completed").queryEqual(toValue: false).observe(.value, with: { snapshot in
             var newItems: [Activity] = []
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot,

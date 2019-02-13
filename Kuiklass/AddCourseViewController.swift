@@ -32,12 +32,13 @@ class AddCourseViewController: BaseViewController {
         super.viewDidLoad()
         
 
+        urlLabel.fieldLabel()
         addButton.mainButton()
         courseName.mainField()
         courseLabel.fieldLabel()
         courseDescription.mainField()
         descriptionLabel.fieldLabel()
-        imageButton.secButton()
+        
 
         ref = Database.database().reference(withPath: "courses")
         
@@ -79,7 +80,7 @@ class AddCourseViewController: BaseViewController {
         let url = URL(string: imageUrl.text ?? "")
         imageView.kf.setImage(with: url)
         imageView.contentMode = .scaleAspectFit
-                
+        
     }
 }
 
