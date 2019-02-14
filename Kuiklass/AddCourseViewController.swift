@@ -38,6 +38,7 @@ class AddCourseViewController: BaseViewController {
         courseLabel.fieldLabel()
         courseDescription.mainField()
         descriptionLabel.fieldLabel()
+        imageUrl.mainField()
         
 
         ref = Database.database().reference(withPath: "courses")
