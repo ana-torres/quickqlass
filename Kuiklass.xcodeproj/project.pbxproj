@@ -114,6 +114,55 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A1A85184221DA949002C6726 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				A1C28B2B21E89406004E6A23 /* Intro1ViewController.swift */,
+				A1C28B2D21E89428004E6A23 /* Intro2ViewController.swift */,
+				A1C28B2F21E89433004E6A23 /* Intro3ViewController.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		A1A85185221DA955002C6726 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1C28B3521E898F5004E6A23 /* IntroNavController.swift */,
+				A195169421FCBEBB00B7D03D /* BaseViewController.swift */,
+				A1117F3E220A4FB400E4FBB6 /* ExamsTableViewController.swift */,
+				A1117F40220A4FEC00E4FBB6 /* OthersTableViewController.swift */,
+				A134D2A42210A1610081B7B3 /* EditActivitiesViewController.swift */,
+				A1A966BF22141CBD00C5151D /* CompletedTableViewController.swift */,
+				A1C28BA021EE1DC1004E6A23 /* AddCourseViewController.swift */,
+				A1C28BAB21EE2F53004E6A23 /* AddActivityViewController.swift */,
+				A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */,
+				A1C28B1D21E772FD004E6A23 /* HomeViewController.swift */,
+				A1C28B2921E893E7004E6A23 /* MainPageViewController.swift */,
+				A1A85186221DA976002C6726 /* Access */,
+				A1A85184221DA949002C6726 /* Intro */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1A85186221DA976002C6726 /* Access */ = {
+			isa = PBXGroup;
+			children = (
+				A1C28B1921E772E3004E6A23 /* LoginViewController.swift */,
+				A1C28B1B21E772ED004E6A23 /* RegisterViewController.swift */,
+			);
+			path = Access;
+			sourceTree = "<group>";
+		};
+		A1A85187221DA9A7002C6726 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A1C28B3321E89518004E6A23 /* Utilities.swift */,
+				A1117F342209990900E4FBB6 /* ImportInfo.swift */,
+				A1BEE82122137C6500FF53BE /* Fonts */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		A1BEE82122137C6500FF53BE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,36 +194,19 @@
 		A1C28B0621E77234004E6A23 /* Kuiklass */ = {
 			isa = PBXGroup;
 			children = (
-				A1BEE82122137C6500FF53BE /* Fonts */,
 				A1C28BAA21EE2C94004E6A23 /* ActivityCell */,
 				A1C28B9D21EE1AE3004E6A23 /* Models */,
+				A1A85185221DA955002C6726 /* View */,
 				A1C28B9C21EE1843004E6A23 /* CourseCell */,
+				A1A85187221DA9A7002C6726 /* Util */,
 				A1C28B0721E77234004E6A23 /* AppDelegate.swift */,
 				A1C28B0B21E77234004E6A23 /* Main.storyboard */,
 				A10D374122117B1300BC1A55 /* Assets.xcassets */,
 				A1C28B1021E77236004E6A23 /* LaunchScreen.storyboard */,
 				A1C28B1321E77236004E6A23 /* Info.plist */,
-				A1C28B1921E772E3004E6A23 /* LoginViewController.swift */,
-				A1C28B1B21E772ED004E6A23 /* RegisterViewController.swift */,
-				A1C28B1D21E772FD004E6A23 /* HomeViewController.swift */,
-				A1C28B2921E893E7004E6A23 /* MainPageViewController.swift */,
-				A1C28B2B21E89406004E6A23 /* Intro1ViewController.swift */,
-				A1C28B2D21E89428004E6A23 /* Intro2ViewController.swift */,
-				A1C28B2F21E89433004E6A23 /* Intro3ViewController.swift */,
-				A1C28B3121E894D8004E6A23 /* MainNavigationController.swift */,
-				A1C28B3321E89518004E6A23 /* Utilities.swift */,
-				A1C28B3521E898F5004E6A23 /* IntroNavController.swift */,
 				A1C28B7021ECDB61004E6A23 /* GoogleService-Info.plist */,
-				A1C28BA021EE1DC1004E6A23 /* AddCourseViewController.swift */,
-				A1C28BAB21EE2F53004E6A23 /* AddActivityViewController.swift */,
-				A14CC86621F3B869002C4DD2 /* ActivitiesTableViewController.swift */,
-				A195169421FCBEBB00B7D03D /* BaseViewController.swift */,
 				A1117F3022083B3700E4FBB6 /* TabController.swift */,
-				A1117F342209990900E4FBB6 /* ImportInfo.swift */,
-				A1117F3E220A4FB400E4FBB6 /* ExamsTableViewController.swift */,
-				A1117F40220A4FEC00E4FBB6 /* OthersTableViewController.swift */,
-				A134D2A42210A1610081B7B3 /* EditActivitiesViewController.swift */,
-				A1A966BF22141CBD00C5151D /* CompletedTableViewController.swift */,
+				A1C28B3121E894D8004E6A23 /* MainNavigationController.swift */,
 			);
 			path = Kuiklass;
 			sourceTree = "<group>";

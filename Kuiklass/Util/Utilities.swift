@@ -54,7 +54,7 @@ extension UILabel {
     func mainLabel() {
         
         self.textColor = UIColor(red:0.21, green:0.31, blue:0.34, alpha:1.0)
-        self.font = self.font.withSize(30)
+        self.font = self.font.withSize(40)
     }
 }
 

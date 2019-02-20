@@ -42,6 +42,8 @@ class MainPageViewController: UIPageViewController{
         button.setTitleColor(UIColor.gray, for: .highlighted)
         button.setTitleColor(UIColor.black, for: .normal)
         button.addTarget(self, action:#selector(toNextArticle), for: .touchUpInside)
+        button.layer.backgroundColor = UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0).cgColor
+        button.tintColor = UIColor.white
         
         self.view.addSubview(button)
         
@@ -90,9 +92,9 @@ class MainPageViewController: UIPageViewController{
         pageControl = UIPageControl(frame: CGRect(x:0, y: UIScreen.main.bounds.maxY - 150, width: UIScreen.main.bounds.width, height: 50))
         self.pageControl.numberOfPages = pages.count
         self.pageControl.currentPage = 0
-        self.pageControl.tintColor = UIColor(red: 0.57, green: 0.61, blue: 0.74, alpha: 1.0)
+        self.pageControl.tintColor = UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0)
         self.pageControl.pageIndicatorTintColor = UIColor(red: 0.91, green: 0.91, blue: 0.91, alpha: 1.0)
-        self.pageControl.currentPageIndicatorTintColor = UIColor(red: 0.57, green: 0.61, blue: 0.74, alpha: 1)
+        self.pageControl.currentPageIndicatorTintColor = UIColor(red:0.31, green:0.80, blue:0.66, alpha:1.0)
         self.view.addSubview(pageControl)
     }
 }

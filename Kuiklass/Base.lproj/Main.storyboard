@@ -34,17 +34,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Añade tus cursos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIF-IV-KGw">
-                                <rect key="frame" x="83" y="120" width="248" height="202"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="botonAnadir-1" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-mb-91a">
+                                <rect key="frame" x="83" y="403" width="262" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="35"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Añade tus cursos en un click" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIF-IV-KGw">
+                                <rect key="frame" x="64" y="133" width="300" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="30"/>
                                 <color key="textColor" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cursos" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-mb-91a">
-                                <rect key="frame" x="83" y="330" width="248" height="308"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CwM-S2-hGn"/>
@@ -63,17 +63,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="8mS-UK-0fb">
-                                <rect key="frame" x="20" y="154" width="374" height="573"/>
+                                <rect key="frame" x="20" y="316" width="374" height="367"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inicia sesión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4W-nF-rzd">
-                                        <rect key="frame" x="37" y="47" width="309" height="110"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-Nh-JX3">
+                                        <rect key="frame" x="45" y="198" width="290" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
-                                        <color key="textColor" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                                        <state key="normal" title="Acceder"/>
+                                        <connections>
+                                            <action selector="login:" destination="iTK-DX-m0m" eventType="touchUpInside" id="g9d-IR-hBb"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-user-14.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vZ9-hR-e5h">
+                                        <rect key="frame" x="37" y="45" width="48" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="hDg-Vs-dcD">
+                                        <rect key="frame" x="42" y="115" width="36" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGw-If-Dah">
+                                        <rect key="frame" x="100" y="134" width="235" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo9-pO-m6Y">
+                                        <rect key="frame" x="100" y="55" width="235" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e23-1r-bAU">
-                                        <rect key="frame" x="81" y="422" width="229" height="36"/>
+                                        <rect key="frame" x="76" y="286" width="229" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                         <state key="normal" title="¿Has olvidado la contraseña?">
@@ -83,17 +108,8 @@
                                             <action selector="passwordReset:" destination="iTK-DX-m0m" eventType="touchUpInside" id="qf9-v0-Ajf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-Nh-JX3">
-                                        <rect key="frame" x="45" y="318" width="290" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
-                                        <state key="normal" title="Acceder"/>
-                                        <connections>
-                                            <action selector="login:" destination="iTK-DX-m0m" eventType="touchUpInside" id="g9d-IR-hBb"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtD-hb-Yia">
-                                        <rect key="frame" x="155" y="393" width="80" height="36"/>
+                                        <rect key="frame" x="150" y="257" width="80" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                         <state key="normal" title="Regístrate">
@@ -103,44 +119,34 @@
                                             <segue destination="ByD-aH-rIw" kind="show" id="nNj-jj-67D"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-user-14.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vZ9-hR-e5h">
-                                        <rect key="frame" x="37" y="165" width="48" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="hDg-Vs-dcD">
-                                        <rect key="frame" x="42" y="235" width="36" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vGw-If-Dah">
-                                        <rect key="frame" x="100" y="254" width="235" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo9-pO-m6Y">
-                                        <rect key="frame" x="100" y="175" width="235" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.82609160958904104" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.3096828163" green="0.79560965299999997" blue="0.65698844190000005" alpha="0.3653681506849315" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicia sesión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4W-nF-rzd">
+                                <rect key="frame" x="53" y="158" width="309" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="np7-Hk-75Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.30980392159999998" green="0.79607843140000001" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="W4W-nF-rzd" firstAttribute="leading" secondItem="nqE-wX-9xG" secondAttribute="leading" constant="53" id="6r2-Xu-LrJ"/>
+                            <constraint firstItem="W4W-nF-rzd" firstAttribute="top" secondItem="nqE-wX-9xG" secondAttribute="top" constant="114" id="VoY-wQ-Sgy"/>
                             <constraint firstItem="nqE-wX-9xG" firstAttribute="trailing" secondItem="8mS-UK-0fb" secondAttribute="trailing" constant="20" id="YCp-Kj-fPy"/>
+                            <constraint firstItem="8mS-UK-0fb" firstAttribute="top" secondItem="W4W-nF-rzd" secondAttribute="bottom" constant="48" id="fJv-T3-2qV"/>
                             <constraint firstItem="8mS-UK-0fb" firstAttribute="leading" secondItem="nqE-wX-9xG" secondAttribute="leading" constant="20" id="gIe-Jl-XdY"/>
-                            <constraint firstItem="nqE-wX-9xG" firstAttribute="bottom" secondItem="8mS-UK-0fb" secondAttribute="bottom" constant="135" id="ijh-27-iQR"/>
-                            <constraint firstItem="8mS-UK-0fb" firstAttribute="top" secondItem="nqE-wX-9xG" secondAttribute="top" constant="110" id="q27-oT-YCx"/>
+                            <constraint firstItem="nqE-wX-9xG" firstAttribute="bottom" secondItem="8mS-UK-0fb" secondAttribute="bottom" constant="179" id="ijh-27-iQR"/>
+                            <constraint firstItem="8mS-UK-0fb" firstAttribute="top" secondItem="nqE-wX-9xG" secondAttribute="top" constant="272" id="q27-oT-YCx"/>
+                            <constraint firstItem="nqE-wX-9xG" firstAttribute="trailing" secondItem="W4W-nF-rzd" secondAttribute="trailing" constant="52" id="rKi-tk-rmH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nqE-wX-9xG"/>
                     </view>
                     <navigationItem key="navigationItem" id="kCp-Oa-TVl"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="emailField" destination="lo9-pO-m6Y" id="RGh-Kq-hqY"/>
                         <outlet property="forgotButton" destination="e23-1r-bAU" id="1CC-dQ-NSq"/>
@@ -277,8 +283,8 @@
                                 <color key="textColor" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuevaActividad" translatesAutoresizingMaskIntoConstraints="NO" id="6wm-25-dzB">
-                                <rect key="frame" x="87" y="268" width="241" height="486"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tareas2" translatesAutoresizingMaskIntoConstraints="NO" id="6wm-25-dzB">
+                                <rect key="frame" x="87" y="279" width="241" height="486"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -298,10 +304,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Completar" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r32-Qk-bwR">
-                                <rect key="frame" x="75" y="438" width="287" height="174"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Podrás completar y deshacer tus tareas en rápidamente" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Sc-fQ-urL">
                                 <rect key="frame" x="64" y="208" width="309" height="194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -309,6 +311,10 @@
                                 <color key="textColor" red="0.30588235289999999" green="0.78823529410000004" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="completados" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r32-Qk-bwR">
+                                <rect key="frame" x="64" y="498" width="287" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="7aO-Qz-yaz"/>
@@ -321,10 +327,10 @@
         <!--Intro Nav Controller-->
         <scene sceneID="LtU-s9-8d5">
             <objects>
-                <navigationController storyboardIdentifier="introNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cF5-AG-7cT" customClass="IntroNavController" customModule="Kuiklass" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="introNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="cF5-AG-7cT" customClass="IntroNavController" customModule="Kuiklass" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="8Sr-sF-MLg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.20784313730000001" green="0.31372549020000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -1034,16 +1040,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Completar" width="353.5" height="214"/>
-        <image name="Cursos" width="274" height="329"/>
+        <image name="botonAnadir-1" width="278" height="171"/>
+        <image name="completados" width="842" height="600"/>
         <image name="house-black-silhouette-without-door-3" width="24" height="24"/>
         <image name="icon-user-14.jpg" width="2232" height="1902"/>
-        <image name="nuevaActividad" width="333" height="661.5"/>
         <image name="padlock" width="372" height="512"/>
         <image name="pencil" width="24" height="24"/>
         <image name="pencil-2" width="24" height="24"/>
         <image name="pencil-3" width="24" height="24"/>
         <image name="plus" width="125" height="125"/>
+        <image name="tareas2" width="390" height="727"/>
         <image name="test" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
